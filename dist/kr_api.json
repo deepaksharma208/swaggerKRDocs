@@ -9,7 +9,8 @@
       "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
     }
   },
-  "basePath": "/index.php?route=feed/feed/web_api",
+  "host": "purujit.kartrocket.co",
+  "basePath": "/feed/web_api",
   "schemes": [
     "http"
   ],
@@ -852,10 +853,9 @@
           }
         }
       }
-    }
   },
-  "getInformationPages": { 
-      "GET": { 
+  "/getInformationPages": { 
+      "get": { 
         "tags": ["getInformationPages"], 
         "description": "", 
         "operationId": "getInformationPages", 
@@ -863,19 +863,22 @@
         "parameters": [
           { "name": "id", 
             "in": "query", 
-            "required": "true", 
+            "required": true, 
             "type": "string", 
             "description": "" }
           ], 
         "responses": { 
           "200": { 
-            "description": "Request successfully sent" 
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getInformationPagesResponse"
+            }
           } 
         } 
       } 
     },
-  "getMenu": { 
-      "GET": { 
+  "/getMenu": { 
+      "get": { 
         "tags": ["getMenu"], 
         "description": "", 
         "operationId": "getMenu", 
@@ -883,19 +886,22 @@
         "parameters": [
           { "name": "id", 
             "in": "query", 
-            "required": "true", 
+            "required": true, 
             "type": "string", 
             "description": "" }
       ], 
         "responses": { 
           "200": { 
-            "description": "Request successfully sent" 
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getMenuResponse"
+            }
           } 
         } 
       } 
     },
-  "storeLocation": { 
-    "GET": { 
+  "/storeLocation": { 
+    "get": { 
       "tags": ["storeLocation"], 
       "description": "", 
       "operationId": "storeLocation", 
@@ -903,15 +909,18 @@
       "parameters": [
         { "name": "id",
           "in": "query",
-          "required": "true",
+          "required": true,
           "type": "string",
           "description": "" }
         ], 
       "responses": {
         "200": {
-          "description": "Request successfully sent" } } } },
-  "storePaymentmethods": { 
-    "GET": { 
+          "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/storeLocationResponse"
+            } } } } },
+  "/storePaymentmethods": { 
+    "get": { 
       "tags": ["storePaymentmethods"], 
       "description": "", 
       "operationId": "storePaymentmethods", 
@@ -919,51 +928,101 @@
       "parameters": [
         { "name": "id", 
           "in": "query",
-          "required": "true",
+          "required": true,
           "type": "string",
           "description": "" }
         ], 
       "responses": { 
         "200": { 
-          "description": "Request successfully sent" } } } },
-  "storeFooter": { 
-    "GET": { "tags": ["storeFooter"], "description": "", "operationId": "storeFooter", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getWishlist": { 
-    "GET": { "tags": ["getWishlist"], "description": "", "operationId": "getWishlist", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getBanner": { 
-    "GET": { "tags": ["getBanner"], "description": "", "operationId": "getBanner", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "deleteBannerError1": { 
-    "GET": { "tags": ["deleteBannerError1"], "description": "", "operationId": "deleteBannerError1", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "deleteBannerSuccess": { 
-    "POST": { "tags": ["deleteBannerSuccess"], "description": "", "operationId": "deleteBannerSuccess", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getstaticblock": { 
-    "GET": { "tags": ["getstaticblock"], "description": "", "operationId": "getstaticblock", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getcarousel": { 
-    "GET": { "tags": ["getcarousel"], "description": "", "operationId": "getcarousel", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getlayouts": { 
-    "GET": { "tags": ["getlayouts"], "description": "", "operationId": "getlayouts", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "components": { 
-    "POST": { "tags": ["components"], "description": "", "operationId": "components", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getcomponents": { 
-    "GET": { "tags": ["getcomponents"], "description": "", "operationId": "getcomponents", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getstoreID": { 
-    "GET": { "tags": ["getstoreID"], "description": "", "operationId": "getstoreID", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "storecomponents": { 
-    "POST": { "tags": ["storecomponents"], "description": "", "operationId": "storecomponents", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "storeheaderfooter": { 
-    "POST": { "tags": ["storeheaderfooter"], "description": "", "operationId": "storeheaderfooter", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getstorecomponents": { 
-    "GET": { "tags": ["getstorecomponents"], "description": "", "operationId": "getstorecomponents", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getsortbyproducts": { 
-    "GET": { "tags": ["getsortbyproducts"], "description": "", "operationId": "getsortbyproducts", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getproductsfilter": { 
-    "GET": { "tags": ["getproductsfilter"], "description": "", "operationId": "getproductsfilter", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "activeapp": { 
-    "GET": { "tags": ["activeapp"], "description": "", "operationId": "activeapp", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getHomePageSeo": { 
-    "GET": { "tags": ["getHomePageSeo"], "description": "", "operationId": "getHomePageSeo", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
-  "getCopyrights": { 
-    "GET": { "tags": ["getCopyrights"], "description": "", "operationId": "getCopyrights", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": "true", "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent" } } } },
+          "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/storePaymentmethodsResponse"
+            } } } } },
+  "/storeFooter": { 
+    "get": { "tags": ["storeFooter"], "description": "", "operationId": "storeFooter", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/storeFooterResponse"
+            } } } } },
+  "/getWishlist": { 
+    "get": { "tags": ["getWishlist"], "description": "", "operationId": "getWishlist", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getWishlistResponse"
+            } } } } },
+  "/getBanner": { 
+    "get": { "tags": ["getBanner"], "description": "", "operationId": "getBanner", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getBannerResponse"
+            } } } } },
+  "/getstaticblock": { 
+    "get": { "tags": ["getstaticblock"], "description": "", "operationId": "getstaticblock", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getstaticblockResponse"
+            } } } } },
+  "/getcarousel": { 
+    "get": { "tags": ["getcarousel"], "description": "", "operationId": "getcarousel", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getcarouselResponse"
+            } } } } },
+  "/getlayouts": { 
+    "get": { "tags": ["getlayouts"], "description": "", "operationId": "getlayouts", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getlayoutsResponse"
+            } } } } },
+  "/components": { 
+    "post": { "tags": ["components"], "description": "", "operationId": "components", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/componentsResponse"
+            } } } } },
+  "/getcomponents": { 
+    "get": { "tags": ["getcomponents"], "description": "", "operationId": "getcomponents", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getcomponentsResponse"
+            } } } } },
+  "/getstoreID": { 
+    "get": { "tags": ["getstoreID"], "description": "", "operationId": "getstoreID", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getstoreIDResponse"
+            } } } } },
+  "/storecomponents": { 
+    "post": { "tags": ["storecomponents"], "description": "", "operationId": "storecomponents", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/storecomponentsResponse"
+            } } } } },
+  "/storeheaderfooter": { 
+    "post": { "tags": ["storeheaderfooter"], "description": "", "operationId": "storeheaderfooter", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/storeheaderfooterResponse"
+            } } } } },
+  "/getstorecomponents": { 
+    "get": { "tags": ["getstorecomponents"], "description": "", "operationId": "getstorecomponents", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getstorecomponentsResponse"
+            } } } } },
+  "/getsortbyproducts": { 
+    "get": { "tags": ["getsortbyproducts"], "description": "", "operationId": "getsortbyproducts", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getsortbyproductsResponse"
+            } } } } },
+  "/getproductsfilter": { 
+    "get": { "tags": ["getproductsfilter"], "description": "", "operationId": "getproductsfilter", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getproductsfilterResponse"
+            } } } } },
+  "/activeapp": { 
+    "get": { "tags": ["activeapp"], "description": "", "operationId": "activeapp", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/activeappResponse"
+            } } } } },
+  "/getHomePageSeo": { 
+    "get": { "tags": ["getHomePageSeo"], "description": "", "operationId": "getHomePageSeo", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getHomePageSeoResponse"
+            } } } } },
+  "/getCopyrights": { 
+    "get": { "tags": ["getCopyrights"], "description": "", "operationId": "getCopyrights", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getCopyrightsResponse"
+            } } } } } },
   "definitions": {
     "getCategoryResponse": {
       "title": "Get Category",
@@ -1298,7 +1357,7 @@
       "properties": {
         "success": {
           "type": "boolean",
-          "example": "true"
+          "example": true
         },
         "product_added": {
           "type": "string",
@@ -1360,7 +1419,7 @@
       "properties": {
         "success": {
           "type": "boolean",
-          "example": "true"
+          "example": true
         },
         "products": {
           "type": "array",
@@ -1377,7 +1436,7 @@
               "sku": "GY893D832",
               "option": [],
               "quantity": "1",
-              "stock": "true",
+              "stock": true,
               "price": "1000",
               "total": "1000"
             }
@@ -1434,7 +1493,7 @@
         "success": {
           "type": "boolean",
           "example": {
-            "success": "true"
+            "success": true
           }
         },
         "msg": {
@@ -1450,7 +1509,7 @@
         "success": {
           "type": "boolean",
           "example": {
-            "success": "true"
+            "success": true
           }
         },
         "msg": {
@@ -1466,7 +1525,7 @@
         "success": {
           "type": "boolean",
           "example": {
-            "success": "true"
+            "success": true
           }
         },
         "msg": {
@@ -1482,7 +1541,7 @@
         "success": {
           "type": "boolean",
           "example": {
-            "success": "true"
+            "success": true
           }
         },
         "bestseller": {
@@ -1529,7 +1588,7 @@
       "properties": {
         "success": {
           "type": "boolean",
-          "example": "true"
+          "example": true
         },
         "customer": {
           "type": "object",
@@ -1921,6 +1980,69 @@
       "updateOrderResponse": {
         "title": "Json response of update Orders",
         "type": "object"
+      },
+      "getInformationPagesResponse": {
+        "title": "Json response"
+      },
+      "getMenuResponse": {
+        "title": "Json response"
+      },
+      "storeLocationResponse": {
+        "title": "Json response"
+      },
+      "storePaymentmethodsResponse": {
+        "title": "Json response"
+      },
+      "storeFooterResponse": {
+        "title": "Json response"
+      },
+      "getWishlistResponse": {
+        "title": "Json response"
+      },
+      "getBannerResponse": {
+        "title": "Json response"
+      },
+      "getstaticblockResponse": {
+        "title": "Json response"
+      },
+      "getcarouselResponse": {
+        "title": "Json response"
+      },
+      "getlayoutsResponse": {
+        "title": "Json response"
+      },
+      "componentsResponse": {
+        "title": "Json response"
+      },
+      "getcomponentsResponse": {
+        "title": "Json response"
+      },
+      "getstoreIDResponse": {
+        "title": "Json response"
+      },
+      "storecomponentsResponse": {
+        "title": "Json response"
+      },
+      "storeheaderfooterResponse": {
+        "title": "Json response"
+      },
+      "getsortbyproductsResponse": {
+        "title": "Json response"
+      },
+      "getstorecomponentsResponse": {
+        "title": "Json response"
+      },
+      "getproductsfilterResponse": {
+        "title": "Json response"
+      },
+      "activeappResponse": {
+        "title": "Json response"
+      },
+      "getHomePageSeoResponse": {
+        "title": "Json response"
+      },
+      "getCopyrightsResponse": {
+        "title": "Json response"
       }
     }
   }
