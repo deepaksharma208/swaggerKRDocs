@@ -1982,67 +1982,88 @@
         "type": "object"
       },
       "getInformationPagesResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getMenuResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "storeLocationResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "storePaymentmethodsResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "storeFooterResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getWishlistResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getBannerResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getstaticblockResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getcarouselResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getlayoutsResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "componentsResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getcomponentsResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getstoreIDResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "storecomponentsResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "storeheaderfooterResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getsortbyproductsResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getstorecomponentsResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getproductsfilterResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "activeappResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getHomePageSeoResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       },
       "getCopyrightsResponse": {
-        "title": "Json response"
+        "title": "Json response",
+        "type": "object"
       }
     }
   }
