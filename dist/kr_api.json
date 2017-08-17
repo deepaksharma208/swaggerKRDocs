@@ -10,7 +10,7 @@
     }
   },
   "host": "purujit.kartrocket.co",
-  "basePath": "/feed/web_api",
+  "basePath": "/api",
   "schemes": [
     "http"
   ],
