@@ -860,13 +860,7 @@
         "description": "", 
         "operationId": "getInformationPages", 
         "produces": ["application/json"], 
-        "parameters": [
-          { "name": "id", 
-            "in": "query", 
-            "required": true, 
-            "type": "string", 
-            "description": "" }
-          ], 
+        "parameters": [], 
         "responses": { 
           "200": { 
             "description": "Request successfully sent",
@@ -883,13 +877,7 @@
         "description": "", 
         "operationId": "getMenu", 
         "produces": ["application/json"], 
-        "parameters": [
-          { "name": "id", 
-            "in": "query", 
-            "required": true, 
-            "type": "string", 
-            "description": "" }
-      ], 
+        "parameters": [], 
         "responses": { 
           "200": { 
             "description": "Request successfully sent",
@@ -906,130 +894,1186 @@
       "description": "", 
       "operationId": "storeLocation", 
       "produces": ["application/json"], 
-      "parameters": [
-        { "name": "id",
-          "in": "query",
-          "required": true,
-          "type": "string",
-          "description": "" }
-        ], 
+      "parameters": [], 
       "responses": {
         "200": {
           "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/storeLocationResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/storePaymentmethods": { 
     "get": { 
       "tags": ["storePaymentmethods"], 
       "description": "", 
       "operationId": "storePaymentmethods", 
       "produces": ["application/json"], 
-      "parameters": [
-        { "name": "id", 
-          "in": "query",
-          "required": true,
-          "type": "string",
-          "description": "" }
-        ], 
+      "parameters": [], 
       "responses": { 
         "200": { 
           "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/storePaymentmethodsResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/storeFooter": { 
-    "get": { "tags": ["storeFooter"], "description": "", "operationId": "storeFooter", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["storeFooter"], 
+      "description": "", 
+      "operationId": "storeFooter", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/storeFooterResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getWishlist": { 
-    "get": { "tags": ["getWishlist"], "description": "", "operationId": "getWishlist", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getWishlist"], 
+      "description": "", 
+      "operationId": "getWishlist", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getWishlistResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getBanner": { 
-    "get": { "tags": ["getBanner"], "description": "", "operationId": "getBanner", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getBanner"], 
+      "description": "", 
+      "operationId": "getBanner", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getBannerResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getstaticblock": { 
-    "get": { "tags": ["getstaticblock"], "description": "", "operationId": "getstaticblock", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getstaticblockResponse"
-            } } } } },
+    "get": { 
+      "tags": ["getstaticblock"], 
+      "description": "", 
+      "operationId": "getstaticblock", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/getstaticblockResponse"
+          } 
+        } 
+      } 
+    } 
+  },
   "/getcarousel": { 
-    "get": { "tags": ["getcarousel"], "description": "", "operationId": "getcarousel", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getcarousel"], 
+      "description": "", 
+      "operationId": "getcarousel", 
+      "produces": ["application/json"], 
+      "parameters": [
+        { 
+        "name": "layout_id", 
+        "in": "query", 
+        "required": true,
+        "type": "integer",
+        "description": "" 
+        } 
+      ], 
+      "responses": { 
+        "200": { "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getcarouselResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getlayouts": { 
-    "get": { "tags": ["getlayouts"], "description": "", "operationId": "getlayouts", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getlayouts"], 
+      "description": "", 
+      "operationId": "getlayouts", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { "200": { "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getlayoutsResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/components": { 
-    "post": { "tags": ["components"], "description": "", "operationId": "components", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "post": { 
+      "tags": ["components"], 
+      "description": "", 
+      "operationId": "components", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/componentsResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getcomponents": { 
-    "get": { "tags": ["getcomponents"], "description": "", "operationId": "getcomponents", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getcomponents"], 
+      "description": "", 
+      "operationId": "getcomponents", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getcomponentsResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getstoreID": { 
-    "get": { "tags": ["getstoreID"], "description": "", "operationId": "getstoreID", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getstoreID"], 
+      "description": "", 
+      "operationId": "getstoreID", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getstoreIDResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/storecomponents": { 
-    "post": { "tags": ["storecomponents"], "description": "", "operationId": "storecomponents", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "post": { 
+      "tags": ["storecomponents"], 
+      "description": "", 
+      "operationId": "storecomponents", 
+      "produces": ["application/json"], 
+      "parameters": [
+        { "name": "data", 
+          "in": "body", 
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/storecomponentsRequest"
+          } 
+        } 
+      ], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/storecomponentsResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/storeheaderfooter": { 
-    "post": { "tags": ["storeheaderfooter"], "description": "", "operationId": "storeheaderfooter", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "post": { 
+      "tags": ["storeheaderfooter"], 
+      "description": "", 
+      "operationId": "storeheaderfooter", 
+      "produces": ["application/json"], 
+      "parameters": [
+        { "name": "data", 
+          "in": "body", 
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/storeheaderfooterRequest"
+          } 
+        } ], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/storeheaderfooterResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getstorecomponents": { 
-    "get": { "tags": ["getstorecomponents"], "description": "", "operationId": "getstorecomponents", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getstorecomponents"], 
+      "description": "", 
+      "operationId": "getstorecomponents", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getstorecomponentsResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getsortbyproducts": { 
-    "get": { "tags": ["getsortbyproducts"], "description": "", "operationId": "getsortbyproducts", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getsortbyproducts"], 
+      "description": "", 
+      "operationId": "getsortbyproducts", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getsortbyproductsResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getproductsfilter": { 
-    "get": { "tags": ["getproductsfilter"], "description": "", "operationId": "getproductsfilter", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getproductsfilter"], 
+      "description": "", 
+      "operationId": "getproductsfilter", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getproductsfilterResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/activeapp": { 
-    "get": { "tags": ["activeapp"], "description": "", "operationId": "activeapp", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["activeapp"], 
+      "description": "", 
+      "operationId": "activeapp", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/activeappResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getHomePageSeo": { 
-    "get": { "tags": ["getHomePageSeo"], "description": "", "operationId": "getHomePageSeo", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getHomePageSeo"], 
+      "description": "", 
+      "operationId": "getHomePageSeo", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getHomePageSeoResponse"
-            } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
   "/getCopyrights": { 
-    "get": { "tags": ["getCopyrights"], "description": "", "operationId": "getCopyrights", "produces": ["application/json"], "parameters": [{ "name": "id", "in": "query", "required": true, "type": "string", "description": "" } ], "responses": { "200": { "description": "Request successfully sent",
+    "get": { 
+      "tags": ["getCopyrights"], 
+      "description": "", 
+      "operationId": "getCopyrights", 
+      "produces": ["application/json"], 
+      "parameters": [], 
+      "responses": { 
+        "200": { 
+          "description": "Request successfully sent",
             "schema": {
               "$ref": "#/definitions/getCopyrightsResponse"
-            } } } } } },
+            } 
+          } 
+        } 
+      } 
+    },
+  "/updateBanner": {
+    "post": {
+      "description": "",
+      "operationId": "updateBanner",
+      "parameters": [
+        {
+          "description": "updateBanner",
+          "in": "formData",
+          "name": "banner",
+          "required": true,
+          "type": "file"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "consumes": 
+      [
+        "multipart/form-data"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+              "$ref": "#/definitions/updateBannerResponse"
+            }
+        }
+      },
+      "tags": [
+        "updateBanner"
+      ]
+    }
+  },
+  "/updateBannerData": {
+    "post": {
+      "description": "",
+      "consumes": [
+        "application/json"
+      ],
+      "operationId": "updateBannerData",
+      "parameters": [
+        {
+          "description": "",
+          "in": "body",
+          "name": "data",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/updateBannerDataRequest"
+          }
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+              "$ref": "#/definitions/updateBannerDataResponse"
+            }
+        }
+      },
+      "tags": [
+        "updateBannerData"
+      ]
+    }
+  },
+  "/addCart": {
+    "post": {
+      "description": "",
+      "operationId": "addCart",
+      "parameters": [
+        {
+          "description": "",
+          "in": "body",
+          "name": "data",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/addCartRequestdC"
+          }
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/addCartResponse"
+          }
+        }
+      },
+      "tags": [
+        "addCart"
+      ]
+    }
+  },
+  "/addCompare": {
+    "post": {
+      "description": "",
+      "operationId": "addCompare",
+      "parameters": [
+        {
+          "description": "",
+          "in": "body",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "$ref": "#definitions/addCompareRequest"
+          }
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/addCompareResponse"
+          }
+        }
+      },
+      "tags": [
+        "addCompare"
+      ]
+    }
+  },
+  "/addWishlist": {
+    "post": {
+      "description": "",
+      "operationId": "addWishlist",
+      "parameters": [
+        {
+          "description": "",
+          "in": "body",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "$ref": "#definitions/addWishlistRequest"
+          }
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/addWishlistResponse"
+          }
+        }
+      },
+      "tags": [
+        "addWishlist"
+      ]
+    }
+  },
+  "/categoryPagewidgets": {
+    "get": {
+      "description": "",
+      "operationId": "categoryPagewidgets",
+      "parameters": [],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/categoryPagewidgetsResponse"
+          }
+        }
+      },
+      "tags": [
+        "categoryPagewidgets"
+      ]
+    }
+  },
+  "/checkPincodestatus": {
+    "get": {
+      "description": "",
+      "operationId": "checkPincodestatus",
+      "parameters": [
+        {
+          "description": "",
+          "in": "body",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/checkPincodeRequest"
+          }
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/checkPincodestatusResponse"
+          }
+        }
+      },
+      "tags": [
+        "checkPincodestatus"
+      ]
+    }
+  },
+  "/compareList": {
+    "get": {
+      "description": "",
+      "operationId": "compareList",
+      "parameters": [],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/compareListResponse"
+          }
+        }
+      },
+      "tags": [
+        "compareList"
+      ]
+    }
+  },
+  "/deleteBanner": {
+    "post": {
+      "description": "",
+      "operationId": "deleteBanner",
+      "tags": ["deleteBanner"],
+      "produces": ["application/json"],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/deleteBannerRequest"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Banner Deleted Successfully",
+          "schema": {
+            "$ref": "#/definitions/deleteBannerResponse"
+          }
+        }
+      }
+    }
+  },
+  "/discountedProducts": {
+    "get": {
+      "description": "",
+      "operationId": "discountedProducts",
+      "parameters": [],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/discountProductsResponse"
+          }
+        }
+      },
+      "tags": [
+        "discountedProducts"
+      ]
+    }
+  },
+  "/facebookFan": {
+    "get": {
+      "description": "",
+      "operationId": "facebookFan",
+      "parameters": [],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/facebookFanResponse"
+          }
+        }
+      },
+      "tags": [
+        "facebookFan"
+      ]
+    }
+  },
+  "/faviconImage": {
+    "post": {
+      "description": "",
+      "operationId": "faviconImage",
+      "consumes": ["multipart/form-data"],
+      "parameters": [
+        {
+          "description": "",
+          "in": "formData",
+          "name": "config_icon",
+          "required": true,
+          "type": "file"
+        }
+      ],
+      "produces": [
+        "text"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/faviconImageResponse"
+          }
+        }
+      },
+      "tags": [
+        "faviconImage"
+      ]
+    }
+  },
+  "/getBlogs": {
+    "get": {
+      "description": "",
+      "operationId": "getBlogs",
+      "parameters": [],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/getBlogsResponse"
+          }
+        }
+      },
+      "tags": [
+        "getBlogs"
+      ]
+    }
+  },
+  "/getCart": {
+    "get": {
+      "description": "",
+      "operationId": "getCart",
+      "parameters": [],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/getCartResponse"
+          }
+        }
+      },
+      "tags": [
+        "getCart"
+      ]
+    }
+  },
+  "/getCurrency": {
+    "get": {
+      "description": "",
+      "operationId": "getCurrency",
+      "parameters": [],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/getCurrencyResponse"
+          }
+        }
+      },
+      "tags": [
+        "getCurrency"
+      ]
+    }
+  },
+  "/getInstagramfeed": {
+    "get": {
+      "description": "",
+      "operationId": "getInstagramfeed",
+      "parameters": [],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/getInstagramFeedResponse"
+          }
+        }
+      },
+      "tags": [
+        "getInstagramfeed"
+      ]
+    }
+  },
+  "/getSociallogin": {
+    "get": {
+      "description": "",
+      "operationId": "getSociallogin",
+      "parameters": [],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/getSocialloginResponse"
+          }
+        }
+      },
+      "tags": [
+        "getSociallogin"
+      ]
+    }
+  },
+  "/getTestimonials": {
+    "get": {
+      "description": "",
+      "operationId": "getTestimonials",
+      "parameters": [],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/getTestimonialsResponse"
+          }
+        }
+      },
+      "tags": [
+        "getTestimonials"
+      ]
+    }
+  },
+  "/imageDimensions": {
+    "get": {
+      "description": "",
+      "operationId": "imageDimensions",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/imageDimensionsResponse"
+          }
+        }
+      },
+      "tags": [
+        "imageDimensions"
+      ]
+    }
+  },
+  "/latestProducts": {
+    "get": {
+      "description": "",
+      "operationId": "latestProducts",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/latestProductsResponse"
+          }
+        }
+      },
+      "tags": [
+        "latestProducts"
+      ]
+    }
+  },
+  "/othersAlsoBought": {
+    "get": {
+      "description": "",
+      "operationId": "othersAlsoBought",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/othersAlsoBoughtResponse"
+          }
+        }
+      },
+      "tags": [
+        "othersAlsoBought"
+      ]
+    }
+  },
+  "/productFilter": {
+    "get": {
+      "description": "",
+      "operationId": "productFilter",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/productFilterResponse"
+          }
+        }
+      },
+      "tags": [
+        "productFilter"
+      ]
+    }
+  },
+  "/productPageListofApp": {
+    "get": {
+      "description": "",
+      "operationId": "productPageListofApp",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/productPageListofAppResponse"
+          }
+        }
+      },
+      "tags": [
+        "productPageListofApp"
+      ]
+    }
+  },
+  "/productRatingdicount": {
+    "get": {
+      "description": "",
+      "operationId": "productRatingdicount",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/productRatingdiscountResponse"
+          }
+        }
+      },
+      "tags": [
+        "productRatingdicount"
+      ]
+    }
+  },
+  "/scrollTotop": {
+    "get": {
+      "description": "",
+      "operationId": "scrollTotop",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/scrollTotopResponse"
+          }
+        }
+      },
+      "tags": [
+        "scrollTotop"
+      ]
+    }
+  },
+  "/setCurrency": {
+    "get": {
+      "description": "",
+      "operationId": "setCurrency",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/setCurrencyResponse"
+          }
+        }
+      },
+      "tags": [
+        "setCurrency"
+      ]
+    }
+  },
+  "/showcase": {
+    "get": {
+      "description": "",
+      "operationId": "showcase",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/showcaseResponse"
+          }
+        }
+      },
+      "tags": [
+        "showcase"
+      ]
+    }
+  },
+  "/soldoutImage": {
+    "get": {
+      "description": "",
+      "operationId": "soldoutImage",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/soldoutImageResponse"
+          }
+        }
+      },
+      "tags": [
+        "soldoutImage"
+      ]
+    }
+  },
+  "/subscription": {
+    "get": {
+      "description": "",
+      "operationId": "subscription",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/subscriptionResponse"
+          }
+        }
+      },
+      "tags": [
+        "subscription"
+      ]
+    }
+  },
+  "/twitterFeed": {
+    "get": {
+      "description": "",
+      "operationId": "twitterFeed",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/twitterFeedResponse"
+          }
+        }
+      },
+      "tags": [
+        "twitterFeed"
+      ]
+    }
+  },
+  "/uploadImage": {
+    "get": {
+      "description": "",
+      "operationId": "uploadImage",
+      "parameters": [
+        {
+          "description": "",
+          "in": "query",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "Request successfully sent",
+          "schema": {
+            "$ref": "#/definitions/uploadImageResponse"
+          }
+        }
+      },
+      "tags": [
+        "uploadImage"
+      ]
+    }
+  }
+  },
   "definitions": {
     "getCategoryResponse": {
       "title": "Get Category",
       "type": "object",
       "properties": {
         "success": {
-          "type": "boolean"
+          "type": "boolean",
+          "example": true
         },
         "category": {
           "type": "object",
@@ -1983,87 +3027,1510 @@
       },
       "getInformationPagesResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Status of request sent",
+            "example" : true
+          },
+          "Informations": {
+            "type": "string",
+            "example": [{
+              "id": 4,
+              "description": "All information, products and services displayed on the {store_url} website constitute an &quot;invitation to offer&quot;. Your order for purchase constitutes your &quot;offer&quot; which shall be subject to the terms and conditions as listed below. {store_url} website has the right to accept or reject your offer without assigning any reason thereof.",
+              "title": "Terms & Conditions",
+              "href": "http://webbuilder.kartrocket.co/terms-and-conditions"
+            }, 
+            {
+              "id": 6,
+              "description": "<b>Domestic Shipping:</b><br />\r\n\t<br />\r\n\t<span><u>WE OFFER FREE SHIPPING ANYWHERE IN INDIA</u></span></span> <span>Please allow 1-3 working days for your order to be dispatched.",
+              "title": "Shipping and Returns",
+              "href": "http://webbuilder.kartrocket.co/shipping-and-returns"
+            }, 
+            {
+              "id": 8,
+              "description": "<span><b>We protect your\r\nprivacy.</b><span><br>\r\nOur privacy policy\r\nis simple: any information you give us stays with us. We do not rent, sell,\r\nlend, or otherwise distribute your personal information to anyone for any\r\nreason. This includes your contact information, as well as specific order\r\ninformation.",
+              "title": "Privacy Policy",
+              "href": "http://webbuilder.kartrocket.co/privacy-policy"
+            }, 
+            {
+              "id": 10,
+              "description": "Enter your affiliate terms here",
+              "title": "Affiliate Terms",
+              "href": "http://webbuilder.kartrocket.co/affiliate-terms"
+            }]
+          },
+          "count": {
+            "type": "integer",
+            "description": "Count of returned pages",
+            "example": 4
+          }
+        }
       },
       "getMenuResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "string",
+            "description": "json encoded array data",
+            "example": [{
+              "id":  12,
+              "name": "Category 1",
+              "children": [{
+                "id": 2,
+                "name": "SubCategory 1",
+                "href": "http://webbuilder.kartrocket.co/category-1/sub-category-a"
+              },
+              {
+                "id": 4,
+                "name": "SubCategory 2",
+                "href": "http://webbuilder.kartrocket.co/category-1/sub-category-b"
+              }
+            ],
+              "column": 1,
+              "href": "http://webbuilder.kartrocket.co/category-1"}
+            ]
+          },
+          "setting": {
+            "type": "object",
+            "description": "setting values",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "orientation": {
+                "type": "string"
+              },
+              "layout": {
+                "type": "string"
+              },
+              "status": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "modified": {
+                "type": "string"
+              }
+            }
+          }
+        }
       },
       "storeLocationResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "storelocation": {
+            "type": "object",
+            "example": {
+              "store_name": "Webbuilder",
+              "store_owner": "Shashank",
+              "store_address_2": "",
+              "store_address_1": "",
+              "store_city": "",
+              "store_postcode": "",
+              "store_telephone": "8800091852"
+            }
+          }
+        }
       },
       "storePaymentmethodsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "paymentmethods": {
+            "type": "object",
+            "example": {
+              "free_checkout": {
+                "code": "free_checkout",
+                "title": "Free checkout",
+                "sort_order": "1"
+              }
+            }
+          }
+        }
       },
       "storeFooterResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "Information": {
+                "type": "string",
+                "example": [
+                  {
+                    "title": "Terms and Conditions",
+                    "href": "http://webbuilder.kartrocket.co/terms-and-conditions"
+                  },
+                  {
+                    "title": "Shipping and Returns",
+                    "href": "http://webbuilder.kartrocket.co/shipping-and-returns"
+                  },
+                  {
+                    "title": "Privacy Policy",
+                    "href": "http://webbuilder.kartrocket.co/privacy-policy"
+                  }
+                ]
+              },
+              "customer service": {
+                "type": "string",
+                "example": [
+                  {
+                      "title": "Contact Us",
+                      "href": "http://webbuilder.kartrocket.co/contact-us"
+                  },
+                  {
+                      "title": "Returns",
+                      "href": "http://webbuilder.kartrocket.co/return"
+                  },
+                  {
+                      "title": "Site Map",
+                      "href": "http://webbuilder.kartrocket.co/sitemap"
+                  },
+                  {
+                      "title": "Gift Vouchers",
+                      "href": "http://webbuilder.kartrocket.co/voucher"
+                  }
+                ]
+              },
+              "Extras": {
+                "type": "string",
+                "example": [
+                  {
+                      "title": "Tell a Friend",
+                      "href": "http://webbuilder.kartrocket.co/tell-a-friend"
+                  },
+                  {
+                      "title": "Brands",
+                      "href": "http://webbuilder.kartrocket.co/manufacturer"
+                  },
+                  {
+                      "title": "Affiliates",
+                      "href": "http://webbuilder.kartrocket.co/affiliate-account"
+                  },
+                  {
+                      "title": "Specials",
+                      "href": "http://webbuilder.kartrocket.co/specials"
+                  }
+                ]
+              },
+              "my account": {
+                "type": "string",
+                "example": [
+                  {
+                      "title": "My Account",
+                      "href": "http://webbuilder.kartrocket.co/my-account"
+                  },
+                  {
+                      "title": "Order History",
+                      "href": "http://webbuilder.kartrocket.co/my-orders"
+                  },
+                  {
+                      "title": "Wish List",
+                      "href": "http://webbuilder.kartrocket.co/wishlist"
+                  },
+                  {
+                      "title": "Newsletter",
+                      "href": "http://webbuilder.kartrocket.co/newsletter"
+                  },
+                  {
+                      "title": "Track Order",
+                      "href": "http://webbuilder.kartrocket.co/index.php?route=account/track"
+                  }
+                ]
+              }
+            }
+          },
+          "copyrights": {
+            "type": "string",
+            "example": "KARTROCKET.COM"
+          }
+        }
       },
       "getWishlistResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "message": {
+            "type": "string",
+            "example": "data not found"
+          },
+          "wishlist": {
+            "type": "string",
+            "example": []
+          },
+          "count": {
+            "type": "integer",
+            "example": 0
+          }
+        }
       },
       "getBannerResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "banners": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "string",
+                "example": [
+                   {
+                      "id": "7",
+                      "title": "banner1",
+                      "link": "category-1/sub-category-a",
+                      "image": "data/banners/main-banner-970x376-1.jpg",
+                      "thumb": "http://res.cloudinary.com/kartrocket/image/fetch//http://kartrocket-mtp.s3.amazonaws.com/all-stores/image_webbuilder/data/banners/main-banner-970x376-1.jpg"
+                  },
+                  {
+                      "id": "8",
+                      "title": "banner2",
+                      "link": "category-2/sub-category-a-5",
+                      "image": "data/banners/main-banner-970x376.jpg",
+                      "thumb": "http://res.cloudinary.com/kartrocket/image/fetch//http://kartrocket-mtp.s3.amazonaws.com/all-stores/image_webbuilder/data/banners/main-banner-970x376.jpg"
+                  }
+                ]
+              },
+              "setting": {
+                "type": "object",
+                "properties": {
+                  "banner_slide_autoplay": {
+                    "type": "string",
+                    "example": "1"
+                  },
+                  "banner_slide_transition": {
+                    "type": "string",
+                    "example": "slideleft"
+                  },
+                  "banner_transition_time": {
+                    "type": "integer",
+                    "example": 3000
+                  },
+                  "navigator_type": {
+                    "type": "string",
+                    "example": "verticalcentered"
+                  }
+                }
+              }
+            }
+          }
+        }
       },
       "getstaticblockResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "staticblocks": {
+                "type": "string",
+                "example": {
+                  "1": {
+                    "module_title": {
+                        "1": "Image banner (position Promotion)"
+                    },
+                    "description": {
+                        "1": "&lt;div class=&quot;row-fluid&quot;&gt;\r\n&lt;div class=&quot;span6&quot; style=&quot;float:left;margin-right:20px;width:370px&quot;&gt;\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://fashionstyle.kartrocket.co/image_fashionstyle/data/banners/Un66titled.png&quot; style=&quot;width: 370px; height: 215px;&quot; /&gt;&lt;/p&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;span6&quot; style=&quot;float:left;margin-right:10px;width:370px&quot;&gt;\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://fashionstyle.kartrocket.co/image_fashionstyle/data/banners/dU2ntitled.png&quot; style=&quot;width: 370px; height: 215px;&quot; /&gt;&lt;/p&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;span6&quot; style=&quot;float:left;margin-right:10px;width:370px&quot;&gt;\r\n&lt;p&gt;&lt;img alt=&quot;&quot; p=&quot;&quot; src=&quot;http://fashionstyle.kartrocket.co/image_fashionstyle/data/banners/U87ntitled.png&quot; /&gt;&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n"
+                    },
+                    "layout_id": "1",
+                    "position": "content_bottom",
+                    "status": "0",
+                    "module_class": "",
+                    "sort_order": "4"
+                    },
+                  "2": {
+                    "module_title": {
+                        "1": ""
+                    },
+                    "description": {
+                        "1": "&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;\r\n\r\n&lt;div class=&quot;newsletter-submit&quot;&gt;&lt;!--&lt;input alt=&quot;username&quot; class=&quot;inputbox&quot; name=&quot;email&quot; size=&quot;31&quot; type=&quot;text&quot; value=&quot;Type your email&quot; /&gt;&lt;input class=&quot;button&quot; name=&quot;Submit&quot; type=&quot;submit&quot; value=&quot;Go&quot; /&gt;--&gt;&lt;/div&gt;\r\n"
+                    },
+                    "layout_id": "99999",
+                    "position": "footer_top",
+                    "status": "0",
+                    "module_class": "",
+                    "sort_order": 2 
+                  }
+                }
+              }
+            }
+          }
+        }
       },
       "getcarouselResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "accounts": {
+            "type": "string",
+            "description": "Returns \"data not found\", if not carousel found in given layout",
+            "example": "data not found"
+          }
+        }
       },
       "getlayoutsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "string",
+            "description": "an array containing different layout id's and names",
+            "example": [
+              {
+                  "layout_id": "6",
+                  "name": "Account"
+              },
+              {
+                  "layout_id": "47",
+                  "name": "Account downloads Page"
+              },
+              {
+                  "layout_id": "46",
+                  "name": "Address book Page"
+              },
+              {
+                  "layout_id": "10",
+                  "name": "Affiliate"
+              },
+              {
+                  "layout_id": "43",
+                  "name": "Affiliate account page"
+              },
+              {
+                  "layout_id": "41",
+                  "name": "Affiliate registration page"
+              },
+              {
+                  "layout_id": "42",
+                  "name": "Affiliate registration success page"
+              },
+              {
+                  "layout_id": "24",
+                  "name": "Blog Category"
+              },
+              {
+                  "layout_id": "23",
+                  "name": "Blog Home"
+              },
+              {
+                  "layout_id": "25",
+                  "name": "Blog Page"
+              },
+              {
+                  "layout_id": "53",
+                  "name": "Brand List"
+              },
+              {
+                  "layout_id": "52",
+                  "name": "Brand Page"
+              },
+              {
+                  "layout_id": "34",
+                  "name": "Cart"
+              },
+              {
+                  "layout_id": "3",
+                  "name": "Category"
+              },
+              {
+                  "layout_id": "45",
+                  "name": "Change Password Page"
+              },
+              {
+                  "layout_id": "7",
+                  "name": "Checkout"
+              },
+              {
+                  "layout_id": "18",
+                  "name": "Checkout Sucess"
+              },
+              {
+                  "layout_id": "8",
+                  "name": "Contact"
+              },
+              {
+                  "layout_id": "28",
+                  "name": "Contact Success"
+              },
+              {
+                  "layout_id": "17",
+                  "name": "Deal of the day"
+              },
+              {
+                  "layout_id": "4",
+                  "name": "Default"
+              },
+              {
+                  "layout_id": "44",
+                  "name": "Edit account information page"
+              },
+              {
+                  "layout_id": "15",
+                  "name": "Facebook Store - Category"
+              },
+              {
+                  "layout_id": "12",
+                  "name": "Facebook Store - Home"
+              },
+              {
+                  "layout_id": "13",
+                  "name": "Facebook Store - Product"
+              },
+              {
+                  "layout_id": "14",
+                  "name": "Facebook Store - Search"
+              },
+              {
+                  "layout_id": "1",
+                  "name": "Home"
+              },
+              {
+                  "layout_id": "11",
+                  "name": "Information"
+              },
+              {
+                  "layout_id": "19",
+                  "name": "Login Page"
+              },
+              {
+                  "layout_id": "20",
+                  "name": "Logout Page"
+              },
+              {
+                  "layout_id": "5",
+                  "name": "Manufacturer"
+              },
+              {
+                  "layout_id": "51",
+                  "name": "Newsletter subscription"
+              },
+              {
+                  "layout_id": "16",
+                  "name": "OneCheckOut"
+              },
+              {
+                  "layout_id": "36",
+                  "name": "Order History Page"
+              },
+              {
+                  "layout_id": "37",
+                  "name": "Order Information Page"
+              },
+              {
+                  "layout_id": "2",
+                  "name": "Product"
+              },
+              {
+                  "layout_id": "40",
+                  "name": "Product Return Page"
+              },
+              {
+                  "layout_id": "49",
+                  "name": "Product return request"
+              },
+              {
+                  "layout_id": "21",
+                  "name": "Registration Page"
+              },
+              {
+                  "layout_id": "22",
+                  "name": "Registration Success Page"
+              },
+              {
+                  "layout_id": "48",
+                  "name": "Rewards Point Page"
+              },
+              {
+                  "layout_id": "26",
+                  "name": "Search"
+              },
+              {
+                  "layout_id": "9",
+                  "name": "Sitemap"
+              },
+              {
+                  "layout_id": "38",
+                  "name": "Special Offer Page"
+              },
+              {
+                  "layout_id": "39",
+                  "name": "Tell a Friend Page"
+              },
+              {
+                  "layout_id": "50",
+                  "name": "Transaction page"
+              },
+              {
+                  "layout_id": "27",
+                  "name": "Voucher"
+              },
+              {
+                  "layout_id": "35",
+                  "name": "Wish List"
+              }
+            ]
+          },
+          "count": {
+            "type": "integer",
+            "description": "count of layouts",
+            "example": 48
+          }
+        }
+      },
+      "componentsRequest": {
+        "title": "Add components",
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "elem": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "theme": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
       },
       "componentsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "components": {
+            "type": "string",
+            "example": "Data inserted"
+          }
+        }
       },
       "getcomponentsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "elem": {
+                  "type": "string"
+                },
+                "theme": {
+                  "type": "string"
+                }
+              },
+              "example": [
+                {
+                    "id": "2",
+                    "url": "/images/Header2.png",
+                    "type": "header",
+                    "name": "Header 2",
+                    "elem": "header2",
+                    "theme": "Fashion"
+                },
+                {
+                    "id": "3",
+                    "url": "/images/Header3.png",
+                    "type": "header",
+                    "name": "Header 3",
+                    "elem": "header3",
+                    "theme": "Fashion"
+                },
+                {
+                    "id": "4",
+                    "url": "/images/Header4.png",
+                    "type": "header",
+                    "name": "Header 4",
+                    "elem": "header4",
+                    "theme": "Fashion"
+                },
+                {
+                    "id": "5",
+                    "url": "/images/Footer1.png",
+                    "type": "footer",
+                    "name": "Footer 1",
+                    "elem": "footer1",
+                    "theme": "Fashion"
+                },
+                {
+                    "id": "7",
+                    "url": "/images/Banner1.png",
+                    "type": "banner",
+                    "name": "Banner 1",
+                    "elem": "banner1",
+                    "theme": "Fashion"
+                },
+                {
+                    "id": "9",
+                    "url": "/images/ThreeColumn.png",
+                    "type": "static",
+                    "name": "Three Column",
+                    "elem": "three-column",
+                    "theme": "Common"
+                },
+                {
+                    "id": "10",
+                    "url": "/images/TwoColumn.png",
+                    "type": "static",
+                    "name": "Two Column",
+                    "elem": "two-column",
+                    "theme": "Common"
+                }
+              ]
+            }
+          },
+          "count": {
+            "type": "integer",
+            "example": 9
+          }
+        }
       },
       "getstoreIDResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true,
+            "description": "status of request"
+          },
+          "store_id": {
+            "type": "integer",
+            "example": 54312,
+            "description": "id of your store"
+          }
+        }
+      },
+      "storecomponentsRequest": {
+        "title": "Json request",
+        "type": "object",
+        "properties": {
+          "store_id": {
+            "type": "integer",
+            "example": 54312
+          },
+          "layout_id": {
+            "type": "integer",
+            "example": 12
+          }
+        }
       },
       "storecomponentsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "components": {
+            "type": "string",
+            "example": "data updated!"
+          }
+        }
+      },
+      "storeheaderfooterRequest": {
+        "title": "Json response",
+        "type": "object",
+        "properties": {
+          "store_id": {
+            "type": "integer",
+            "example": 54312
+          }
+        }
       },
       "storeheaderfooterResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "header": {
+            "type": "string",
+            "example": "data updated!"
+          }
+        }
       },
       "getsortbyproductsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "example": [
+                  {
+                      "text": "Default",
+                      "value": "p.product_id-DESC",
+                      "href": "&sort=p.product_id&order=DESC"
+                  },
+                  {
+                      "text": "New",
+                      "value": "p.date_added-DESC",
+                      "href": "&sort=p.date_added&order=DESC"
+                  },
+                  {
+                      "text": "Name (A - Z)",
+                      "value": "pd.name-ASC",
+                      "href": "&sort=pd.name&order=ASC"
+                  },
+                  {
+                      "text": "Name (Z - A)",
+                      "value": "pd.name-DESC",
+                      "href": "&sort=pd.name&order=DESC"
+                  },
+                  {
+                      "text": "Price (Low > High)",
+                      "value": "p.price-ASC",
+                      "href": "&sort=p.price&order=ASC"
+                  },
+                  {
+                      "text": "Price (High > Low)",
+                      "value": "p.price-DESC",
+                      "href": "&sort=p.price&order=DESC"
+                  }
+                ]
+              }
+            },
+            "count": {
+              "type": "integer",
+              "example": 6
+            }
+        }
       },
       "getstorecomponentsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "store_id": {"type": "integer"},
+                "count": {"type": "integer"},
+                "layout_id": {"type": "string"},
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": "string"
+                    },
+                    "example": [
+                      {
+                          "cid": 4,
+                          "type": "header",
+                          "elem": "header4",
+                          "data": []
+                      },
+                      {
+                          "cid": 5,
+                          "type": "footer",
+                          "elem": "footer1",
+                          "data": []
+                      },
+                      {
+                          "heading1Color": "#000",
+                          "heading2Color": "#000",
+                          "heading3Color": "#000",
+                          "pageLinksColor": "#2f2b2b",
+                          "bodyTextColor": "#000",
+                          "saleTextColor": "red",
+                          "borderColor": "#eee",
+                          "buttonColor1": "#fff",
+                          "buttonColor2": "#000",
+                          "buttonTextColor1": "#000",
+                          "buttonTextColor2": "#fff",
+                          "sbuttonColor": "#fff",
+                          "sbuttonTextColor": "#000",
+                          "textFieldColor": "#fff",
+                          "textFieldTextColor": "#ddd",
+                          "showAddToCart": true,
+                          "showAddToCompare": true,
+                          "showAddToWishlist": true,
+                          "showStarRating": true,
+                          "showDiscountPercentage": true,
+                          "font1": {
+                              "family": "Montserrat",
+                              "category": "sans-serif"
+                          },
+                          "font2": {
+                              "family": "Montserrat",
+                              "category": "sans-serif"
+                          }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "count": {
+            "type": "integer",
+            "example": 1
+          }
+        }
       },
       "getproductsfilterResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "speedmenu": {
+                "type": "integer"
+              },
+              "spepedresults": {
+                "type": "integer"
+              },
+              "see_more_trigger": {
+                "type": "integer"
+              },
+              "count_products": {
+                "type": "integer"
+              },
+              "nofollow": {
+                "type": "string"
+              },
+              "track_google": {
+                "type": "integer"
+              },
+              "is_ajax": {
+                "type": "integer"
+              },
+              "menu_filters": {
+                "type": "integer"
+              },
+              "values_selected": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                  }
+              },
+              "values_no_selected": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                  }
+              },
+              "categories": {
+                "type": "string"
+              },
+              "heading_title": {
+                "type": "string"
+              },
+              "see_more_text": {
+                "type": "string"
+              },
+              "remove_filter_text": {
+                "type": "string"
+              },
+              "pricerange_text": {
+                "type": "string"
+              },
+              "no_data_text": {
+                "type": "string"
+              },
+              "manufacturer_text": {
+                "type": "string"
+              },
+              "category_text": {
+                "type": "string"
+              },
+              "search_in": {
+                "type": "string"
+              },
+              "search_filter_text": {
+                "type": "string"
+              },
+              "entry_selected": {
+                "type": "string"
+              },
+              "entry_select_filter": {
+                "type": "string"
+              },
+              "txt_select_on_select": {
+                "type": "string"
+              },
+              "category_style": {
+                "type": "string"
+              },
+              "isset_subcategories": {
+                "type": "string"
+              },
+              "price_range_is_not_selected": {
+                "type": "boolean"
+              },
+              "price_range_script": {
+                "type": "boolean"
+              },
+              "values_no_selected_categories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "values_selected_categories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "MaxPrice": {
+                "type": "integer"
+              },
+              "MinPrice": {
+                "type": "integer"
+              },
+              "intivalprice": {
+                "type": "string"
+              },
+              "SymbolLeft": {
+                "type": "string"
+              },
+              "SymbolRight": {
+                "type": "string"
+              },
+              "price_view": {
+                "type": "string"
+              },
+              "Currency": {
+                "type": "string"
+              },
+              "PriceUrl": {
+                "type": "string"
+              },
+              "PriceAjaxUrl": {
+                "type": "integer"
+              },
+              "array_prices_values": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "prices": {"type": "string"},
+                    "intMax": {"type": "integer"},
+                    "intMin": {"type": "integer"},
+                    "total": {"type": "integer"}
+                  }
+                }
+              },
+              "ajex_category_id": {
+                "type": "integer"
+              }
+             }
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
       },
       "activeappResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              }, 
+              "code": {
+                "type": "string"
+              }, 
+              "setting": {
+                "type": "object",
+                "properties": {
+                  "limit": {
+                    "type": "string"
+                  },
+                  "image_width": {
+                    "type": "string"
+                  },
+                  "image_height": {
+                    "type": "string"
+                  },
+                  "layout_id": {
+                    "type": "string"
+                  },
+                  "position": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "sort_order": {
+                    "type": "string"
+                  }
+                }
+              },
+              "status": {
+                "type": "string"
+              }, 
+              "link": {
+                "type": "string"
+              }, 
+              "uninstall": {
+                "type": "string"
+              }
+            }
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
       },
       "getHomePageSeoResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "meta_title": {
+                "type": "string"
+              },
+              "meta_description": {
+                "type": "string"
+              },
+              "meta_keyword": {
+                "type": "string"
+              }
+            }
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
       },
       "getCopyrightsResponse": {
         "title": "Json response",
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
+      },
+    "updateBannerResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "updateBannerDataRequest": {
+        "title": "Json response",
+        "type": "object",
+        "properties": {
+          "image": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "banner_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      },
+      "updateBannerDataResponse": {
+        "title": "Json response",
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "banner": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    },
+                    "thumb": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "setting": {
+                "type": "object",
+                "properties": {
+                  "banner_slide_autoplay": {
+                    "type": "boolean"
+                  },
+                  "banner_transition_time": {
+                    "type": "boolean"
+                  },
+                  "banner_slide_transition": {
+                    "type": "string"
+                  },
+                  "navigator_type": {
+                    "type": "string"
+                  }
+                }
+              },
+              "count": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+    "addCartRequest": {
+        "title": "Json request",
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "product_option_id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          }
+        }
+      },
+      "addCartResponse": {
+        "title": "Json response",
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
+      },
+    "addWishlistRequest": {
+        "title": "Json request",
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          }
+        }
+      },
+      "addWishlistResponse": {
+        "title": "Json response",
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object"
+          },
+          "message": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
+      },
+      "addCompareRequest": {
+        "title": "Json request",
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          }
+        }
+      },
+      "addCompareResponse": {
+        "title": "Json response",
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
+      },
+    "categoryPagewidgetsResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "checkPincodeResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "checkPincodestatusRequest": {
+        "title": "Json response",
+        "type": "object",
+        "properties": {
+          "pincode": {
+            "type": "string"
+          }
+        }
+      },
+      "checkPincodestatusResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "compareListResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "deleteBannerRequest": {
+        "title": "Json response",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 2
+          }
+        }
+      },
+    "deleteBannerResponse": {
+        "title": "Json response",
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "banner": {
+            "type": "string",
+            "example": "Data has been updated"
+          }
+        }
+      },
+    "discountProductsResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "facebookFanResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "faviconImageResponse": {
+        "title": "Json response",
+        "type": "string",
+        "description": "url of the image is returned",
+        "example": "http:\/\/res.cloudinary.com\/kartrocket\/image\/fetch\/http:\/\/kartrocket-mtp.s3.amazonaws.com\/all-stores\/image_purujit\/data\/logo\/beautiful-butterfly-brown-pattern.jpg"
+      },
+    "getBlogsResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "getCartResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "getCurrencyResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "getInstagramFeedResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "getSocialloginResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "getTestimonialsResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "imageDimensionsResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "latestProductsResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "othersAlsoBoughtResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "productFilterResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+      "productPageListofAppResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "productRatingdiscountResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "scrollTotopResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "setCurrencyResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "showcaseResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "soldoutImageResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "subscriptionResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "twitterFeedResponse": {
+        "title": "Json response",
+        "type": "object"
+      },
+    "uploadImageResponse": {
+        "title": "Json response",
         "type": "object"
       }
-    }
   }
+}
