@@ -4470,67 +4470,574 @@
       },
     "getInstagramFeedResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "image": {"type": "string"},
+                "link": {"type": "string"},
+                "comment": {"type": "integer"},
+                "like": {"type": "integer"},
+                "title": {"type": "string"},
+                "created_time": {"type": "string"}
+              }
+            }
+          },
+          "setting": {
+            "object": {
+              "status": {"type": "string"},
+              "token": {"type": "string"},
+              "limit": {"type": "string"},
+              "show_title": {"type": "string"},
+              "like": {"type": "string"},
+              "comment": {"type": "string"},
+              "layout_id": {"type": "string"},
+              "position": {"type": "string"},
+              "structure": {"type": "string"},
+              "scroll": {"type": "string"},
+              "sort_ordert": {"type": "string"},
+            }
+          }
+        }
       },
     "getSocialloginResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {"type": "boolean"},
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string"},
+                "status": {"status": "boolean"},
+                "key": {"type": "string"},
+                "secret": {"type": "string"}
+              }
+            }
+          }
+        }
       },
     "getTestimonialsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "image": {
+                  "type": "string"
+                },
+                "video_link": {
+                  "type": "string"
+                },
+                "profile": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "sort_order": {
+                  "type": "string"
+                },
+                "thumb": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "imageDimensions": {
+            "type": "object",
+            "properties": {
+              "width": {
+                "type": "string"
+              },
+              "height": {
+                "type": "string"
+              }
+            }
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
       },
     "imageDimensionsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "string"
+                  }
+                }
+              },
+              "productPopup": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "string"
+                  }
+                }
+              },
+              "productThumb": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "string"
+                  }
+                }
+              },
+              "productList": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "string"
+                  }
+                }
+              },
+              "productAdditionalimage": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "string"
+                  }
+                }
+              },
+              "relatedProduct": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "string"
+                  }
+                }
+              },
+              "compareProduct": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "string"
+                  }
+                }
+              },
+              "wishList": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "string"
+                  }
+                }
+              },
+              "cart": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "string"
+                  }
+                }
+              },
+              "colorOption": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
       },
     "latestProductsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "string"
+          }
       },
     "othersAlsoBoughtResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "string"
+          }
       },
     "productFilterResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "product_id": {
+                  "type": "string"
+                },
+                "thumb": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "special": {
+                  "type": "string"
+                },
+                "discountPercentage": {
+                  "type": "integer"
+                },
+                "tax": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "integer"
+                },
+                "reviews": {
+                  "type": "string"
+                }
+              }
+            },
+            "example": [
+              {
+                  "product_id": "3",
+                  "thumb": "http://res.cloudinary.com/kartrocket/image/fetch/w_300,q_auto,h_300,c_pad,b_white,f_auto,fl_progressive/http%3A%2F%2Fkartrocket-mtp.s3.amazonaws.com%2Fall-stores%2Fimage_purujit%2Fdata%2FWS859.jpg",
+                  "name": "Lorem Ipsum Vivamus",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor scelerisque vestibulum. Nunc..",
+                  "price": "311",
+                  "special": "207",
+                  "discountPercentage": 33,
+                  "tax": "199",
+                  "rating": 0,
+                  "reviews": "text_reviews"
+              },
+              {
+                  "product_id": "4",
+                  "thumb": "http://res.cloudinary.com/kartrocket/image/fetch/w_300,q_auto,h_300,c_pad,b_white,f_auto,fl_progressive/http%3A%2F%2Fkartrocket-mtp.s3.amazonaws.com%2Fall-stores%2Fimage_purujit%2Fdata%2FWS859.jpg",
+                  "name": "Lorem Ipsum Vivamus",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor scelerisque vestibulum. Nunc..",
+                  "price": "311",
+                  "special": "207",
+                  "discountPercentage": 33,
+                  "tax": "199",
+                  "rating": 0,
+                  "reviews": "text_reviews"
+              }
+            ]
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
       },
       "productPageListofAppResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "customField": {
+                "type": "string"
+              },
+              "displayAttribute": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "notifyMe": {
+                "type": "boolean"
+              },
+              "optionErrormessage": {
+                "type": "boolean"
+              },
+              "displayStock": {
+                "type": "boolean"
+              },
+              "slognBreadcrumb": {
+                "type": "boolean"
+              },
+              "buyNowbutton": {
+                "type": "boolean"
+              },
+              "displayPriceswithTax": {
+                "type": "boolean"
+              },
+              "bulkOrder": {
+                "type": "boolean"
+              },
+              "productEnquiry": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "boolean"
+                  },
+                  "text": {
+                    "type": "string"
+                  }
+                }
+              },
+              "sizeChart": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "boolean"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "sizechart": {
+                    "type": "object",
+                    "properties": {
+                      "sc_icon": {
+                        "type": "string"
+                      },
+                      "sc_popup": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "checkCODpincodeDelivery": {
+                "type": "boolean"
+              },
+              "productGrouping": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "boolean"
+                  },
+                  "swatch_group_heading": {
+                    "type": "string"
+                  },
+                  "swatch_type": {
+                    "type": "string"
+                  },
+                  "productGrouping": {
+                    "type": "string"
+                  }
+                }
+              },
+              "review": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
       },
     "productRatingdiscountResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "productStarrating":{
+                "type": "boolean"
+              },
+              "discountPercentage": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
       },
     "scrollTotopResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "success": {
+          "type": "boolean"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "setCurrencyRequest": {
+        "title": "Json response",
+        "type": "object",
+        "properties": {
+          "currency_code": {
+            "type": "string",
+            "example": "INR"
+          }
+        }
       },
     "setCurrencyResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "currencies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "symbol_left": {
+                  "type": "string"
+                },
+                "symbol_right": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "activeCurrency": {
+            "type": "string"
+          }
+        }
       },
     "showcaseResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "string"
+          }
+        }
       },
     "soldoutImageResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "string"
       },
     "subscriptionResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "string"
+          }
+        }
       },
     "twitterFeedResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success" :{
+            "type": "boolean"
+          },
+          "facebook": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "twitter_id": {
+                    "type": "string"
+                  },
+                  "oauth_access_token": {
+                    "type": "string"
+                  },
+                  "oauth_access_token_secret": {
+                    "type": "string"
+                  },
+                  "consumer_key": {
+                    "type": "string"
+                  },
+                  "twitterpro_data_widget_id": {
+                    "type": "string"    
+                  }
+                }
+              }
+            }
+          }
+        }
       },
     "uploadImageResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          }
+        }
       }
   }
 }
