@@ -586,10 +586,17 @@
           {
             "name": "order_id",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": "Order id"
-          }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": "Order id"
+          },
         ],
         "responses": {
           "200": {
@@ -645,28 +652,28 @@
           {
             "name": "code",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": "coupon code"
           },
           {
             "name": "date_from",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": "from which date"
           },
           {
             "name": "page",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": "page number"
           },
           {
             "name": "date_to",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string",
             "description": "to which date in unix dateTime format"
           }
@@ -853,1218 +860,1181 @@
           }
         }
       }
-  },
-  "/getInformationPages": { 
+    },
+    "/getInformationPages": { 
+        "get": { 
+          "tags": ["getInformationPages"], 
+          "description": "", 
+          "operationId": "getInformationPages", 
+          "produces": ["application/json"], 
+          "parameters": [], 
+          "responses": { 
+            "200": { 
+              "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getInformationPagesResponse"
+              }
+            } 
+          } 
+        } 
+      },
+    "/getMenu": { 
+        "get": { 
+          "tags": ["getMenu"], 
+          "description": "", 
+          "operationId": "getMenu", 
+          "produces": ["application/json"], 
+          "parameters": [], 
+          "responses": { 
+            "200": { 
+              "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getMenuResponse"
+              }
+            } 
+          } 
+        } 
+      },
+    "/storeLocation": { 
       "get": { 
-        "tags": ["getInformationPages"], 
+        "tags": ["storeLocation"], 
         "description": "", 
-        "operationId": "getInformationPages", 
+        "operationId": "storeLocation", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/storeLocationResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/storePaymentmethods": { 
+      "get": { 
+        "tags": ["storePaymentmethods"], 
+        "description": "", 
+        "operationId": "storePaymentmethods", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/storePaymentmethodsResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/storeFooter": { 
+      "get": { 
+        "tags": ["storeFooter"], 
+        "description": "", 
+        "operationId": "storeFooter", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/storeFooterResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getWishlist": { 
+      "get": { 
+        "tags": ["getWishlist"], 
+        "description": "", 
+        "operationId": "getWishlist", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getWishlistResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getBanner": { 
+      "get": { 
+        "tags": ["getBanner"], 
+        "description": "", 
+        "operationId": "getBanner", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getBannerResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getstaticblock": { 
+      "get": { 
+        "tags": ["getstaticblock"], 
+        "description": "", 
+        "operationId": "getstaticblock", 
         "produces": ["application/json"], 
         "parameters": [], 
         "responses": { 
           "200": { 
             "description": "Request successfully sent",
             "schema": {
-              "$ref": "#/definitions/getInformationPagesResponse"
-            }
+              "$ref": "#/definitions/getstaticblockResponse"
+            } 
           } 
         } 
       } 
     },
-  "/getMenu": { 
+    "/getcarousel": { 
       "get": { 
-        "tags": ["getMenu"], 
+        "tags": ["getcarousel"], 
         "description": "", 
-        "operationId": "getMenu", 
+        "operationId": "getcarousel", 
+        "produces": ["application/json"], 
+        "parameters": [
+          { 
+          "name": "layout_id", 
+          "in": "query", 
+          "required": true,
+          "type": "integer",
+          "description": "" 
+          } 
+        ], 
+        "responses": { 
+          "200": { "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getcarouselResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getlayouts": { 
+      "get": { 
+        "tags": ["getlayouts"], 
+        "description": "", 
+        "operationId": "getlayouts", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { "200": { "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getlayoutsResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/components": { 
+      "post": { 
+        "tags": ["components"], 
+        "description": "", 
+        "operationId": "components", 
         "produces": ["application/json"], 
         "parameters": [], 
         "responses": { 
           "200": { 
             "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/componentsResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getcomponents": { 
+      "get": { 
+        "tags": ["getcomponents"], 
+        "description": "", 
+        "operationId": "getcomponents", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getcomponentsResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getstoreID": { 
+      "get": { 
+        "tags": ["getstoreID"], 
+        "description": "", 
+        "operationId": "getstoreID", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getstoreIDResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/storecomponents": { 
+      "post": { 
+        "tags": ["storecomponents"], 
+        "description": "", 
+        "operationId": "storecomponents", 
+        "produces": ["application/json"], 
+        "parameters": [
+          { "name": "data", 
+            "in": "body", 
+            "required": true,
             "schema": {
-              "$ref": "#/definitions/getMenuResponse"
+              "$ref": "#/definitions/storecomponentsRequest"
+            } 
+          } 
+        ], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/storecomponentsResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/storeheaderfooter": { 
+      "post": { 
+        "tags": ["storeheaderfooter"], 
+        "description": "", 
+        "operationId": "storeheaderfooter", 
+        "produces": ["application/json"], 
+        "parameters": [
+          { "name": "data", 
+            "in": "body", 
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/storeheaderfooterRequest"
+            } 
+          } ], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/storeheaderfooterResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getstorecomponents": { 
+      "get": { 
+        "tags": ["getstorecomponents"], 
+        "description": "", 
+        "operationId": "getstorecomponents", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getstorecomponentsResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getsortbyproducts": { 
+      "get": { 
+        "tags": ["getsortbyproducts"], 
+        "description": "", 
+        "operationId": "getsortbyproducts", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getsortbyproductsResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getproductsfilter": { 
+      "get": { 
+        "tags": ["getproductsfilter"], 
+        "description": "", 
+        "operationId": "getproductsfilter", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getproductsfilterResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/activeapp": { 
+      "get": { 
+        "tags": ["activeapp"], 
+        "description": "", 
+        "operationId": "activeapp", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/activeappResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getHomePageSeo": { 
+      "get": { 
+        "tags": ["getHomePageSeo"], 
+        "description": "", 
+        "operationId": "getHomePageSeo", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getHomePageSeoResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/getCopyrights": { 
+      "get": { 
+        "tags": ["getCopyrights"], 
+        "description": "", 
+        "operationId": "getCopyrights", 
+        "produces": ["application/json"], 
+        "parameters": [], 
+        "responses": { 
+          "200": { 
+            "description": "Request successfully sent",
+              "schema": {
+                "$ref": "#/definitions/getCopyrightsResponse"
+              } 
+            } 
+          } 
+        } 
+      },
+    "/updateBanner": {
+      "post": {
+        "description": "",
+        "operationId": "updateBanner",
+        "parameters": [
+          {
+            "description": "updateBanner",
+            "in": "formData",
+            "name": "banner",
+            "required": true,
+            "type": "file"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": 
+        [
+          "multipart/form-data"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+                "$ref": "#/definitions/updateBannerResponse"
+              }
+          }
+        },
+        "tags": [
+          "updateBanner"
+        ]
+      }
+    },
+    "/updateBannerData": {
+      "post": {
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "updateBannerData",
+        "parameters": [
+          {
+            "description": "",
+            "in": "body",
+            "name": "data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/updateBannerDataRequest"
             }
-          } 
-        } 
-      } 
-    },
-  "/storeLocation": { 
-    "get": { 
-      "tags": ["storeLocation"], 
-      "description": "", 
-      "operationId": "storeLocation", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
             "schema": {
-              "$ref": "#/definitions/storeLocationResponse"
-            } 
-          } 
-        } 
-      } 
+                "$ref": "#/definitions/updateBannerDataResponse"
+              }
+          }
+        },
+        "tags": [
+          "updateBannerData"
+        ]
+      }
     },
-  "/storePaymentmethods": { 
-    "get": { 
-      "tags": ["storePaymentmethods"], 
-      "description": "", 
-      "operationId": "storePaymentmethods", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
+    "/addCart": {
+      "post": {
+        "description": "",
+        "operationId": "addCart",
+        "parameters": [
+          {
+            "description": "",
+            "in": "body",
+            "name": "data",
+            "required": true,
             "schema": {
-              "$ref": "#/definitions/storePaymentmethodsResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/storeFooter": { 
-    "get": { 
-      "tags": ["storeFooter"], 
-      "description": "", 
-      "operationId": "storeFooter", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/storeFooterResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getWishlist": { 
-    "get": { 
-      "tags": ["getWishlist"], 
-      "description": "", 
-      "operationId": "getWishlist", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getWishlistResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getBanner": { 
-    "get": { 
-      "tags": ["getBanner"], 
-      "description": "", 
-      "operationId": "getBanner", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getBannerResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getstaticblock": { 
-    "get": { 
-      "tags": ["getstaticblock"], 
-      "description": "", 
-      "operationId": "getstaticblock", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/getstaticblockResponse"
-          } 
-        } 
-      } 
-    } 
-  },
-  "/getcarousel": { 
-    "get": { 
-      "tags": ["getcarousel"], 
-      "description": "", 
-      "operationId": "getcarousel", 
-      "produces": ["application/json"], 
-      "parameters": [
-        { 
-        "name": "layout_id", 
-        "in": "query", 
-        "required": true,
-        "type": "integer",
-        "description": "" 
-        } 
-      ], 
-      "responses": { 
-        "200": { "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getcarouselResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getlayouts": { 
-    "get": { 
-      "tags": ["getlayouts"], 
-      "description": "", 
-      "operationId": "getlayouts", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { "200": { "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getlayoutsResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/components": { 
-    "post": { 
-      "tags": ["components"], 
-      "description": "", 
-      "operationId": "components", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/componentsResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getcomponents": { 
-    "get": { 
-      "tags": ["getcomponents"], 
-      "description": "", 
-      "operationId": "getcomponents", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getcomponentsResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getstoreID": { 
-    "get": { 
-      "tags": ["getstoreID"], 
-      "description": "", 
-      "operationId": "getstoreID", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getstoreIDResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/storecomponents": { 
-    "post": { 
-      "tags": ["storecomponents"], 
-      "description": "", 
-      "operationId": "storecomponents", 
-      "produces": ["application/json"], 
-      "parameters": [
-        { "name": "data", 
-          "in": "body", 
-          "required": true,
-          "schema": {
-            "$ref": "#/definitions/storecomponentsRequest"
-          } 
-        } 
-      ], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/storecomponentsResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/storeheaderfooter": { 
-    "post": { 
-      "tags": ["storeheaderfooter"], 
-      "description": "", 
-      "operationId": "storeheaderfooter", 
-      "produces": ["application/json"], 
-      "parameters": [
-        { "name": "data", 
-          "in": "body", 
-          "required": true,
-          "schema": {
-            "$ref": "#/definitions/storeheaderfooterRequest"
-          } 
-        } ], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/storeheaderfooterResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getstorecomponents": { 
-    "get": { 
-      "tags": ["getstorecomponents"], 
-      "description": "", 
-      "operationId": "getstorecomponents", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getstorecomponentsResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getsortbyproducts": { 
-    "get": { 
-      "tags": ["getsortbyproducts"], 
-      "description": "", 
-      "operationId": "getsortbyproducts", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getsortbyproductsResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getproductsfilter": { 
-    "get": { 
-      "tags": ["getproductsfilter"], 
-      "description": "", 
-      "operationId": "getproductsfilter", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getproductsfilterResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/activeapp": { 
-    "get": { 
-      "tags": ["activeapp"], 
-      "description": "", 
-      "operationId": "activeapp", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/activeappResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getHomePageSeo": { 
-    "get": { 
-      "tags": ["getHomePageSeo"], 
-      "description": "", 
-      "operationId": "getHomePageSeo", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getHomePageSeoResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/getCopyrights": { 
-    "get": { 
-      "tags": ["getCopyrights"], 
-      "description": "", 
-      "operationId": "getCopyrights", 
-      "produces": ["application/json"], 
-      "parameters": [], 
-      "responses": { 
-        "200": { 
-          "description": "Request successfully sent",
-            "schema": {
-              "$ref": "#/definitions/getCopyrightsResponse"
-            } 
-          } 
-        } 
-      } 
-    },
-  "/updateBanner": {
-    "post": {
-      "description": "",
-      "operationId": "updateBanner",
-      "parameters": [
-        {
-          "description": "updateBanner",
-          "in": "formData",
-          "name": "banner",
-          "required": true,
-          "type": "file"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "consumes": 
-      [
-        "multipart/form-data"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-              "$ref": "#/definitions/updateBannerResponse"
+              "$ref": "#/definitions/addCartRequest"
             }
-        }
-      },
-      "tags": [
-        "updateBanner"
-      ]
-    }
-  },
-  "/updateBannerData": {
-    "post": {
-      "description": "",
-      "consumes": [
-        "application/json"
-      ],
-      "operationId": "updateBannerData",
-      "parameters": [
-        {
-          "description": "",
-          "in": "body",
-          "name": "data",
-          "required": true,
-          "schema": {
-            "$ref": "#/definitions/updateBannerDataRequest"
           }
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-              "$ref": "#/definitions/updateBannerDataResponse"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/addCartResponse"
             }
-        }
-      },
-      "tags": [
-        "updateBannerData"
-      ]
-    }
-  },
-  "/addCart": {
-    "post": {
-      "description": "",
-      "operationId": "addCart",
-      "parameters": [
-        {
-          "description": "",
-          "in": "body",
-          "name": "data",
-          "required": true,
-          "schema": {
-            "$ref": "#/definitions/addCartRequestdC"
           }
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/addCartResponse"
+        },
+        "tags": [
+          "addCart"
+        ]
+      }
+    },
+    "/addCompare": {
+      "post": {
+        "description": "",
+        "operationId": "addCompare",
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "description": "",
+            "in": "body",
+            "name": "product_id",
+            "schema": {
+              "$ref": "#definitions/addCompareRequest"
+            }
           }
-        }
-      },
-      "tags": [
-        "addCart"
-      ]
-    }
-  },
-  "/addCompare": {
-    "post": {
-      "description": "",
-      "operationId": "addCompare",
-      "parameters": [
-        {
-          "description": "",
-          "in": "body",
-          "name": "id",
-          "required": true,
-          "schema": {
-            "$ref": "#definitions/addCompareRequest"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/addCompareResponse"
+            }
           }
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/addCompareResponse"
+        },
+        "tags": [
+          "addCompare"
+        ]
+      }
+    },
+    "/addWishlist": {
+      "post": {
+        "description": "",
+        "operationId": "addWishlist",
+        "parameters": [
+          {
+            "description": "",
+            "in": "body",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "$ref": "#definitions/addWishlistRequest"
+            }
           }
-        }
-      },
-      "tags": [
-        "addCompare"
-      ]
-    }
-  },
-  "/addWishlist": {
-    "post": {
-      "description": "",
-      "operationId": "addWishlist",
-      "parameters": [
-        {
-          "description": "",
-          "in": "body",
-          "name": "id",
-          "required": true,
-          "schema": {
-            "$ref": "#definitions/addWishlistRequest"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/addWishlistResponse"
+            }
           }
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/addWishlistResponse"
+        },
+        "tags": [
+          "addWishlist"
+        ]
+      }
+    },
+    "/categoryPagewidgets": {
+      "get": {
+        "description": "",
+        "operationId": "categoryPagewidgets",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/categoryPagewidgetsResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "addWishlist"
-      ]
-    }
-  },
-  "/categoryPagewidgets": {
-    "get": {
-      "description": "",
-      "operationId": "categoryPagewidgets",
-      "parameters": [],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/categoryPagewidgetsResponse"
+        },
+        "tags": [
+          "categoryPagewidgets"
+        ]
+      }
+    },
+    "/checkPincodestatus": {
+      "get": {
+        "description": "",
+        "operationId": "checkPincodestatus",
+        "parameters": [
+          {
+            "description": "",
+            "in": "body",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/checkPincodeRequest"
+            }
           }
-        }
-      },
-      "tags": [
-        "categoryPagewidgets"
-      ]
-    }
-  },
-  "/checkPincodestatus": {
-    "get": {
-      "description": "",
-      "operationId": "checkPincodestatus",
-      "parameters": [
-        {
-          "description": "",
-          "in": "body",
-          "name": "id",
-          "required": true,
-          "schema": {
-            "$ref": "#/definitions/checkPincodeRequest"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/checkPincodestatusResponse"
+            }
           }
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/checkPincodestatusResponse"
+        },
+        "tags": [
+          "checkPincodestatus"
+        ]
+      }
+    },
+    "/compareList": {
+      "get": {
+        "description": "",
+        "operationId": "compareList",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/compareListResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "checkPincodestatus"
-      ]
-    }
-  },
-  "/compareList": {
-    "get": {
-      "description": "",
-      "operationId": "compareList",
-      "parameters": [],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/compareListResponse"
+        },
+        "tags": [
+          "compareList"
+        ]
+      }
+    },
+    "/deleteBanner": {
+      "post": {
+        "description": "",
+        "operationId": "deleteBanner",
+        "tags": ["deleteBanner"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/deleteBannerRequest"
+            }
           }
-        }
-      },
-      "tags": [
-        "compareList"
-      ]
-    }
-  },
-  "/deleteBanner": {
-    "post": {
-      "description": "",
-      "operationId": "deleteBanner",
-      "tags": ["deleteBanner"],
-      "produces": ["application/json"],
-      "parameters": [
-        {
-          "name": "id",
-          "in": "body",
-          "required": true,
-          "schema": {
-            "$ref": "#/definitions/deleteBannerRequest"
-          }
-        }
-      ],
-      "responses": {
-        "200": {
-          "description": "Banner Deleted Successfully",
-          "schema": {
-            "$ref": "#/definitions/deleteBannerResponse"
+        ],
+        "responses": {
+          "200": {
+            "description": "Banner Deleted Successfully",
+            "schema": {
+              "$ref": "#/definitions/deleteBannerResponse"
+            }
           }
         }
       }
-    }
-  },
-  "/discountedProducts": {
-    "get": {
-      "description": "",
-      "operationId": "discountedProducts",
-      "parameters": [],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/discountProductsResponse"
+    },
+    "/discountedProducts": {
+      "get": {
+        "description": "",
+        "operationId": "discountedProducts",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/discountProductsResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "discountedProducts"
-      ]
-    }
-  },
-  "/facebookFan": {
-    "get": {
-      "description": "",
-      "operationId": "facebookFan",
-      "parameters": [],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/facebookFanResponse"
+        },
+        "tags": [
+          "discountedProducts"
+        ]
+      }
+    },
+    "/facebookFan": {
+      "get": {
+        "description": "",
+        "operationId": "facebookFan",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/facebookFanResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "facebookFan"
-      ]
-    }
-  },
-  "/faviconImage": {
-    "post": {
-      "description": "",
-      "operationId": "faviconImage",
-      "consumes": ["multipart/form-data"],
-      "parameters": [
-        {
-          "description": "",
-          "in": "formData",
-          "name": "config_icon",
-          "required": true,
-          "type": "file"
-        }
-      ],
-      "produces": [
-        "text"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/faviconImageResponse"
+        },
+        "tags": [
+          "facebookFan"
+        ]
+      }
+    },
+    "/faviconImage": {
+      "post": {
+        "description": "",
+        "operationId": "faviconImage",
+        "consumes": ["multipart/form-data"],
+        "parameters": [
+          {
+            "description": "",
+            "in": "formData",
+            "name": "config_icon",
+            "required": true,
+            "type": "file"
           }
-        }
-      },
-      "tags": [
-        "faviconImage"
-      ]
-    }
-  },
-  "/getBlogs": {
-    "get": {
-      "description": "",
-      "operationId": "getBlogs",
-      "parameters": [],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/getBlogsResponse"
+        ],
+        "produces": [
+          "text"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/faviconImageResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "getBlogs"
-      ]
-    }
-  },
-  "/getCart": {
-    "get": {
-      "description": "",
-      "operationId": "getCart",
-      "parameters": [],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/getCartResponse"
+        },
+        "tags": [
+          "faviconImage"
+        ]
+      }
+    },
+    "/getBlogs": {
+      "get": {
+        "description": "",
+        "operationId": "getBlogs",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getBlogsResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "getCart"
-      ]
-    }
-  },
-  "/getCurrency": {
-    "get": {
-      "description": "",
-      "operationId": "getCurrency",
-      "parameters": [],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/getCurrencyResponse"
+        },
+        "tags": [
+          "getBlogs"
+        ]
+      }
+    },
+    "/getCart": {
+      "get": {
+        "description": "",
+        "operationId": "getCart",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getCartResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "getCurrency"
-      ]
-    }
-  },
-  "/getInstagramfeed": {
-    "get": {
-      "description": "",
-      "operationId": "getInstagramfeed",
-      "parameters": [],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/getInstagramFeedResponse"
+        },
+        "tags": [
+          "getCart"
+        ]
+      }
+    },
+    "/getCurrency": {
+      "get": {
+        "description": "",
+        "operationId": "getCurrency",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getCurrencyResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "getInstagramfeed"
-      ]
-    }
-  },
-  "/getSociallogin": {
-    "get": {
-      "description": "",
-      "operationId": "getSociallogin",
-      "parameters": [],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/getSocialloginResponse"
+        },
+        "tags": [
+          "getCurrency"
+        ]
+      }
+    },
+    "/getInstagramfeed": {
+      "get": {
+        "description": "",
+        "operationId": "getInstagramfeed",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getInstagramFeedResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "getSociallogin"
-      ]
-    }
-  },
-  "/getTestimonials": {
-    "get": {
-      "description": "",
-      "operationId": "getTestimonials",
-      "parameters": [],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/getTestimonialsResponse"
+        },
+        "tags": [
+          "getInstagramfeed"
+        ]
+      }
+    },
+    "/getSociallogin": {
+      "get": {
+        "description": "",
+        "operationId": "getSociallogin",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getSocialloginResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "getTestimonials"
-      ]
-    }
-  },
-  "/imageDimensions": {
-    "get": {
-      "description": "",
-      "operationId": "imageDimensions",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/imageDimensionsResponse"
+        },
+        "tags": [
+          "getSociallogin"
+        ]
+      }
+    },
+    "/getTestimonials": {
+      "get": {
+        "description": "",
+        "operationId": "getTestimonials",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/getTestimonialsResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "imageDimensions"
-      ]
-    }
-  },
-  "/latestProducts": {
-    "get": {
-      "description": "",
-      "operationId": "latestProducts",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/latestProductsResponse"
+        },
+        "tags": [
+          "getTestimonials"
+        ]
+      }
+    },
+    "/imageDimensions": {
+      "get": {
+        "description": "",
+        "operationId": "imageDimensions",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/imageDimensionsResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "latestProducts"
-      ]
-    }
-  },
-  "/othersAlsoBought": {
-    "get": {
-      "description": "",
-      "operationId": "othersAlsoBought",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/othersAlsoBoughtResponse"
+        },
+        "tags": [
+          "imageDimensions"
+        ]
+      }
+    },
+    "/latestProducts": {
+      "get": {
+        "description": "",
+        "operationId": "latestProducts",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/latestProductsResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "othersAlsoBought"
-      ]
-    }
-  },
-  "/productFilter": {
-    "get": {
-      "description": "",
-      "operationId": "productFilter",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/productFilterResponse"
+        },
+        "tags": [
+          "latestProducts"
+        ]
+      }
+    },
+    "/othersAlsoBought": {
+      "get": {
+        "description": "",
+        "operationId": "othersAlsoBought",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/othersAlsoBoughtResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "productFilter"
-      ]
-    }
-  },
-  "/productPageListofApp": {
-    "get": {
-      "description": "",
-      "operationId": "productPageListofApp",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/productPageListofAppResponse"
+        },
+        "tags": [
+          "othersAlsoBought"
+        ]
+      }
+    },
+    "/productFilter": {
+      "get": {
+        "description": "",
+        "operationId": "productFilter",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/productFilterResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "productPageListofApp"
-      ]
-    }
-  },
-  "/productRatingdicount": {
-    "get": {
-      "description": "",
-      "operationId": "productRatingdicount",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/productRatingdiscountResponse"
+        },
+        "tags": [
+          "productFilter"
+        ]
+      }
+    },
+    "/productPageListofApp": {
+      "get": {
+        "description": "",
+        "operationId": "productPageListofApp",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/productPageListofAppResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "productRatingdicount"
-      ]
-    }
-  },
-  "/scrollTotop": {
-    "get": {
-      "description": "",
-      "operationId": "scrollTotop",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/scrollTotopResponse"
+        },
+        "tags": [
+          "productPageListofApp"
+        ]
+      }
+    },
+    "/productRatingdicount": {
+      "get": {
+        "description": "",
+        "operationId": "productRatingdicount",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/productRatingdiscountResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "scrollTotop"
-      ]
-    }
-  },
-  "/setCurrency": {
-    "get": {
-      "description": "",
-      "operationId": "setCurrency",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/setCurrencyResponse"
+        },
+        "tags": [
+          "productRatingdicount"
+        ]
+      }
+    },
+    "/scrollTotop": {
+      "post": {
+        "consumes": ["multipart/form-data"],
+        "description": "",
+        "operationId": "scrollTotop",
+        "parameters": [
+          {
+            "description": "",
+            "in": "body",
+            "name": "config_bottomtotop_height",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "",
+            "in": "body",
+            "name": "config_bottomtotop_status",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "description": "",
+            "in": "body",
+            "name": "config_bottomtotop_width",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "",
+            "in": "body",
+            "name": "config_bottomtotop_image",
+            "required": false,
+            "type": "file"
           }
-        }
-      },
-      "tags": [
-        "setCurrency"
-      ]
-    }
-  },
-  "/showcase": {
-    "get": {
-      "description": "",
-      "operationId": "showcase",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/showcaseResponse"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/scrollTotopResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "showcase"
-      ]
-    }
-  },
-  "/soldoutImage": {
-    "get": {
-      "description": "",
-      "operationId": "soldoutImage",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/soldoutImageResponse"
+        },
+        "tags": [
+          "scrollTotop"
+        ]
+      }
+    },
+    "/setCurrency": {
+      "post": {
+        "consumes": "application/json",
+        "description": "",
+        "operationId": "setCurrency",
+        "parameters": [
+          {
+            "description": "",
+            "in": "query",
+            "name": "currency_code",
+            "schema": {
+              "$ref": "#/definitions/setCurrencyRequest"
+            }
           }
-        }
-      },
-      "tags": [
-        "soldoutImage"
-      ]
-    }
-  },
-  "/subscription": {
-    "get": {
-      "description": "",
-      "operationId": "subscription",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/subscriptionResponse"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/setCurrencyResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "subscription"
-      ]
-    }
-  },
-  "/twitterFeed": {
-    "get": {
-      "description": "",
-      "operationId": "twitterFeed",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/twitterFeedResponse"
+        },
+        "tags": [
+          "setCurrency"
+        ]
+      }
+    },
+    "/showcase": {
+      "get": {
+        "description": "",
+        "operationId": "showcase",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/showcaseResponse"
+            }
           }
-        }
-      },
-      "tags": [
-        "twitterFeed"
-      ]
-    }
-  },
-  "/uploadImage": {
-    "get": {
-      "description": "",
-      "operationId": "uploadImage",
-      "parameters": [
-        {
-          "description": "",
-          "in": "query",
-          "name": "id",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "Request successfully sent",
-          "schema": {
-            "$ref": "#/definitions/uploadImageResponse"
+        },
+        "tags": [
+          "showcase"
+        ]
+      }
+    },
+    "/soldoutImage": {
+      "post": {
+        "description": "",
+        "operationId": "soldoutImage",
+        "consumes": ["multipart/form-data"],
+        "parameters": [
+          {
+            "description": "",
+            "in": "body",
+            "name": "config_soldout_image",
+            "required": true,
+            "type": "file"
           }
-        }
-      },
-      "tags": [
-        "uploadImage"
-      ]
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/soldoutImageResponse"
+            }
+          }
+        },
+        "tags": [
+          "soldoutImage"
+        ]
+      }
+    },
+    "/subscription": {
+      "get": {
+        "description": "",
+        "operationId": "subscription",
+        "parameters": [
+          {
+            "description": "",
+            "in": "body",
+            "name": "email",
+            "schema": {
+              "$ref": "#/definitions/subscriptionRequest"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/subscriptionResponse"
+            }
+          }
+        },
+        "tags": [
+          "subscription"
+        ]
+      }
+    },
+    "/twitterFeed": {
+      "get": {
+        "description": "",
+        "operationId": "twitterFeed",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/twitterFeedResponse"
+            }
+          }
+        },
+        "tags": [
+          "twitterFeed"
+        ]
+      }
+    },
+    "/uploadImage": {
+      "post": {
+        "description": "",
+        "operationId": "uploadImage",
+        "consumes": ["multipart/form-data"],
+        "parameters": [
+          {
+            "description": "",
+            "in": "body",
+            "name": "image",
+            "required": true,
+            "type": "file"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successfully sent",
+            "schema": {
+              "$ref": "#/definitions/uploadImageResponse"
+            }
+          }
+        },
+        "tags": [
+          "uploadImage"
+        ]
+      }
     }
-  }
   },
   "definitions": {
     "getCategoryResponse": {
@@ -2995,35 +2965,205 @@
       },
       "getOrderResponse": {
         "title": "Order fetched succesfully",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+              "type": "boolean"
+            },
+          "orders": {
+            "type": "array",
+            "items": {
+              "order_id": {"type": "string"},
+              "invoice_number": {"type": "string"},
+              "store_name": {"type": "string"},
+              "firstname": {"type": "string"},
+              "lastname": {"type": "string"},
+              "email": {"type": "string"},
+              "telephone": {"type": "string"},
+              "mobile": {"type": "string"},
+              "shipping_firstname": {"type": "string"},
+              "shipping_lastname": {"type": "string"},
+              "shipping_company": {"type": "string"},
+              "shipping_address_1": {"type": "string"},
+              "shipping_address_2": {"type": "string"},
+              "shipping_city": {"type": "string"},
+              "shipping_state": {"type": "string"},
+              "shipping_postcode": {"type": "string"},
+              "shipping_country": {"type": "string"},
+              "shipping_method": {"type": "string"},
+              "order_total": {"type": "string"},
+              "entered_weight": {"type": "string"},
+              "routing_code": {"type": "string"},
+              "currency": {"type": "string"},
+              "date_added": {"type": "string"},
+              "date_modified": {"type": "string"},
+              "import_order_id": {"type": "string"},
+              "order_status": {"type": "string"},
+              "order_status_id": {"type": "string"},
+              "payment_method": {"type": "string"},
+              "product_name": {"type": "string"},
+              "model": {"type": "string"},
+              "sku": {"type": "string"},
+              "quantity": {"type": "string"},
+              "product_price": {"type": "string"},
+              "product_tax": {"type": "string"},
+              "tax_class": {"type": "string"},
+              "option": {"type": "string"},
+              "option_value": {"type": "string"},
+              "courier": {"type": "string"},
+              "awb_number": {"type": "string"},
+              "coupon_total": {"type": "string"},
+              "ebs_emi": {"type": "string"},
+              "ebs_emi_fee": {"type": "string"},
+              "payment_fee": {"type": "string"},
+              "store_credit": {"type": "string"},
+              "handling": {"type": "string"},
+              "low_order_fee": {"type": "string"},
+              "shipping": {"type": "string"},
+              "sub_total": {"type": "string"},
+              "tax": {"type": "string"},
+              "total": {"type": "string"},
+              "transaction": {"type": "string"},
+              "voucher": {"type": "string"},
+              "option_sku": {"type": "string"}
+              }
+            },
+            "status": {
+                "type": "string"
+              }
+          }
       },
       "couponResponse": {
-        "title": "Order fetched succesfully",
-        "type": "object"
+        "title": "List of coupons available",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "coupon_id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "code": {
+              "type": "string"
+            },
+            "discount": {
+              "type": "string"
+            },
+            "date_start": {
+              "type": "string"
+            },
+            "date_end": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            }
+          }
+        }
       },
       "orderCountResponse": {
         "title": "Order fetched succesfully",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "result": {
+            "type": "object",
+            "properties": {
+              "count": {"type": "string"},
+              "success_count": {"type": "string"},
+              "success_sale": {"type": "string"}
+            }
+          }
+        }
       },
       "productCountResponse": {
         "title": "Order fetched succesfully",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "count": {
+            "type": "string"
+          }
+        }
       },
       "addChannelProductRequest": {
         "title": "Order fetched succesfully",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "channel_id": {
+                "type": "string"
+              },
+              "kartrocket_product_id": {
+                "type": "string"
+              },
+              "kartrocket_product_sku": {
+                "type": "string"
+              },
+              "channel_product_sku": {
+                "type": "string"
+              }
+            }
+          }
+        }
       },
       "addChannelProductResponse": {
         "title": "Order fetched succesfully",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "channel_product_id": {
+            "type": "string"
+          }
+        }
       },
       "getChannelProductResponse": {
         "title": "Order fetched succesfully",
-        "type": "object"
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            {
+              "channel_product_id": {"type": "string"},
+              "channel_id": {"type": "string"},
+              "channel_name": {"type": "string"},
+              "kartrocket_product_id": {"type": "string"},
+              "kartrocket_product_sku": {"type": "string"},
+              "channel_product_sku": {"type": "string"},
+              "channel_price": {"type": "string"},
+              "status": {"type": "string"},
+              "quantity": {"type": "string"},
+              "price": {"type": "string"},
+              "option_quanity": {"type": "string"},
+              "option_price": {"type": "string"},
+              "option_sku": {"type": "string"},
+              "date_added": {"type": "string"},
+              "date_modified": {"type": "string"}
+           }
+          }
+        }
       },
       "updateOrderResponse": {
         "title": "Json response of update Orders",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "order_update": {
+            "type": "boolean"
+          }
+        }
       },
       "getInformationPagesResponse": {
         "title": "Json response",
@@ -4232,7 +4372,15 @@
       },
     "updateBannerResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
       },
     "updateBannerDataRequest": {
         "title": "Json response",
@@ -4369,7 +4517,7 @@
           }
         }
       },
-      "addCompareRequest": {
+    "addCompareRequest": {
         "title": "Json request",
         "type": "object",
         "properties": {
@@ -4378,7 +4526,7 @@
           }
         }
       },
-      "addCompareResponse": {
+    "addCompareResponse": {
         "title": "Json response",
         "type": "object",
         "properties": {
@@ -4395,11 +4543,20 @@
       },
     "categoryPagewidgetsResponse": {
         "title": "Json response",
-        "type": "object"
-      },
-    "checkPincodeResponse": {
-        "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "autoPageloader": {
+            "type": "object",
+            "properties": {
+              "success": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
       },
     "checkPincodestatusRequest": {
         "title": "Json response",
@@ -4410,13 +4567,32 @@
           }
         }
       },
-      "checkPincodestatusResponse": {
+    "checkPincodestatusResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
       },
     "compareListResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "string"
+          }
+        },
+        "count": {
+          "type": "integer"
+        }
       },
     "deleteBannerRequest": {
         "title": "Json response",
@@ -4444,11 +4620,57 @@
       },
     "discountProductsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "string"
+          }
+        }
       },
     "facebookFanResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "facebook": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "page": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "string"
+                      },
+                      "colorScheme": {
+                        "type": "string"
+                      },
+                      "showFaces": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      },
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
       },
     "faviconImageResponse": {
         "title": "Json response",
@@ -4458,15 +4680,91 @@
       },
     "getBlogsResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "thumb": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "author": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "comment_count": {
+                  "type": "string"
+                },
+                "createdDate": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
       },
     "getCartResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object"
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
       },
     "getCurrencyResponse": {
         "title": "Json response",
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "currencies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "symbol_left": {
+                  "type": "string"
+                },
+                "symbol_right": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "activeCurrency": {
+            "type": "string"
+          }
+        }
       },
     "getInstagramFeedResponse": {
         "title": "Json response",
@@ -4983,6 +5281,15 @@
     "soldoutImageResponse": {
         "title": "Json response",
         "type": "string"
+      },
+      "subscriptionRequest": {
+        "title": "You have successfully subscribed.",
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          }
+        }
       },
     "subscriptionResponse": {
         "title": "Json response",
