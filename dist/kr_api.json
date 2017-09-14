@@ -94,6 +94,7 @@
           "Product"
         ],
         "description": "get specified product",
+        "summary": "get specified product",
         "operationId": "get_product",
         "produces": [
           "application/json"
@@ -131,6 +132,7 @@
         ],
         "description": "get pdf file of invoice",
         "operationId": "get_invoice",
+        "summary": "Get Invoice",
         "produces": [
           "application/json"
         ],
@@ -157,6 +159,7 @@
         ],
         "description": "Get all products in specific category",
         "operationId": "getSpecificProducts",
+        "summary": "Get Specific Product",
         "produces": [
           "application/json"
         ],
@@ -186,6 +189,7 @@
         ],
         "description": "Search products",
         "operationId": "searchProduct",
+        "summary": "Search Product",
         "produces": [
           "application/json"
         ],
@@ -215,6 +219,7 @@
         ],
         "description": "Add product",
         "operationId": "addProduct",
+        "summary": "Add Product",
         "produces": [
           "application/json"
         ],
@@ -246,6 +251,7 @@
         ],
         "description": "add multiple cart items",
         "operationId": "addToCart",
+        "summary": "Add to cart",
         "produces": [
           "application/json"
         ],
@@ -276,6 +282,7 @@
         ],
         "description": "View Cart",
         "operationId": "viewCart",
+        "summary": "View Cart",
         "produces": [
           "application/json"
         ],
@@ -297,6 +304,7 @@
         ],
         "description": "Remove product from cart",
         "operationId": "removeCartProduct",
+        "summary": "Remove Product from Cart",
         "produces": [
           "application/json"
         ],
@@ -325,8 +333,9 @@
         "tags": [
           "Cart"
         ],
-        "description": "Empty cart request",
+        "description": "Empty cart",
         "operationId": "emptyCart",
+        "summary": "Empty Cart",
         "produces": [
           "application/json"
         ],
@@ -346,8 +355,9 @@
         "tags": [
           "Product"
         ],
-        "description": "Update stoke",
-        "operationId": "updateProductStoke",
+        "description": "Update stock",
+        "summary": "Update Stock",
+        "operationId": "updateProductStock",
         "produces": [
           "application/json"
         ],
@@ -389,7 +399,8 @@
         "tags": [
           "Product"
         ],
-        "description": "Update Uption stock",
+        "description": "Update Option stock",
+        "summary": "Update Option Stock",
         "operationId": "updateStock",
         "produces": [
           "application/json"
@@ -448,6 +459,7 @@
         ],
         "description": "Convert Currency",
         "operationId": "convertCurrency",
+        "summary": "Convert Currency",
         "produces": [
           "application/json"
         ],
@@ -478,6 +490,7 @@
         ],
         "description": "List Currency",
         "operationId": "listCurrency",
+        "summary": "List Currency",
         "produces": [
           "application/json"
         ],
@@ -499,6 +512,7 @@
         ],
         "description": "Login to store",
         "operationId": "login",
+        "summary": "Login",
         "produces": [
           "application/json"
         ],
@@ -529,6 +543,7 @@
         ],
         "description": "Register Request",
         "operationId": "register",
+        "summary": "Register",
         "produces": [
           "application/json"
         ],
@@ -558,6 +573,7 @@
           "Best Seller"
         ],
         "description": "Best Seller Product",
+        "summary": "Get Best Seller Product",
         "operationId": "bestSellerProduct",
         "produces": [
           "application/json"
@@ -580,6 +596,7 @@
         ],
         "description": "Get Orders",
         "operationId": "getOrder",
+        "summary": "Get Order",
         "produces": [
           "application/json"
         ],
@@ -616,6 +633,7 @@
         ],
         "description": "Add new order",
         "operationId": "addorder",
+        "summary": "Add Order",
         "produces": [
           "application/json"
         ],
@@ -646,6 +664,7 @@
         ],
         "description": "Get coupons",
         "operationId": "coupons",
+        "summary": "Get Coupon",
         "produces": [
           "application/json"
         ],
@@ -694,8 +713,9 @@
         "tags": [
           "Order"
         ],
-        "description": "COunt orders",
+        "description": "Count orders",
         "operationId": "orderCount",
+        "summary": "Get Order Count",
         "produces": [
           "application/json"
         ],
@@ -717,6 +737,7 @@
         ],
         "description": "Get count of products",
         "operationId": "productCount",
+        "summary": "Get Product Count",
         "produces": [
           "application/json"
         ],
@@ -738,6 +759,7 @@
         ],
         "description": "add channel product",
         "operationId": "addChannelProductRequest",
+        "summary": "Add Channel Product",
         "produces": [
           "application/json"
         ],
@@ -768,6 +790,7 @@
         ],
         "description": "get channel product",
         "operationId": "channelproducts",
+        "summary": "Get Channel Product",
         "produces": [
           "application/json"
         ],
@@ -818,6 +841,7 @@
         ],
         "description": "Update order",
         "operationId": "updateOrder",
+        "summary": "Update Order",
         "produces": [
           "application/json"
         ],
@@ -868,6 +892,7 @@
         ],
         "description": "",
         "operationId": "getInformationPages",
+        "summary": "Get Information Pages",
         "produces": [
           "application/json"
         ],
@@ -885,10 +910,11 @@
     "/getMenu": {
       "get": {
         "tags": [
-          "getMenu"
+          "Menu"
         ],
         "description": "",
         "operationId": "getMenu",
+        "summary": "Get Menu",
         "produces": [
           "application/json"
         ],
@@ -906,9 +932,10 @@
     "/storeLocation": {
       "get": {
         "tags": [
-          "storeLocation"
+          "Store"
         ],
         "description": "",
+        "summary": "Get Store Location",
         "operationId": "storeLocation",
         "produces": [
           "application/json"
@@ -927,10 +954,11 @@
     "/storePaymentmethods": {
       "get": {
         "tags": [
-          "storePaymentmethods"
+          "Store"
         ],
         "description": "",
         "operationId": "storePaymentmethods",
+        "summary": "Payment Methods",
         "produces": [
           "application/json"
         ],
@@ -948,9 +976,10 @@
     "/storeFooter": {
       "get": {
         "tags": [
-          "storeFooter"
+          "Store"
         ],
         "description": "",
+        "summary": "Footer",
         "operationId": "storeFooter",
         "produces": [
           "application/json"
@@ -969,10 +998,11 @@
     "/getWishlist": {
       "get": {
         "tags": [
-          "getWishlist"
+          "WishList"
         ],
         "description": "",
         "operationId": "getWishlist",
+        "summary": "WishList",
         "produces": [
           "application/json"
         ],
@@ -994,6 +1024,7 @@
         ],
         "description": "",
         "operationId": "getBanner",
+        "summary": "Get Banner",
         "produces": [
           "application/json"
         ],
@@ -1015,6 +1046,7 @@
         ],
         "description": "",
         "operationId": "getstaticblock",
+        "summary": "Get Static Block",
         "produces": [
           "application/json"
         ],
@@ -1035,6 +1067,7 @@
           "getcarousel"
         ],
         "description": "",
+        "summary": "Get Carousel",
         "operationId": "getcarousel",
         "produces": [
           "application/json"
@@ -1061,9 +1094,10 @@
     "/getlayouts": {
       "get": {
         "tags": [
-          "getlayouts"
+          "Layout"
         ],
         "description": "",
+        "summary": "Get Layout",
         "operationId": "getlayouts",
         "produces": [
           "application/json"
@@ -1082,9 +1116,10 @@
     "/components": {
       "post": {
         "tags": [
-          "components"
+          "Components"
         ],
         "description": "",
+        "summary": "Add Components",
         "operationId": "components",
         "produces": [
           "application/json"
@@ -1112,9 +1147,10 @@
     "/getcomponents": {
       "get": {
         "tags": [
-          "getcomponents"
+          "Components"
         ],
         "description": "",
+        "summary": "Get Components",
         "operationId": "getcomponents",
         "produces": [
           "application/json"
@@ -1133,9 +1169,10 @@
     "/getstoreID": {
       "get": {
         "tags": [
-          "getstoreID"
+          "Store"
         ],
         "description": "",
+        "summary": "Get Store Id",
         "operationId": "getstoreID",
         "produces": [
           "application/json"
@@ -1154,9 +1191,10 @@
     "/storecomponents": {
       "post": {
         "tags": [
-          "storecomponents"
+          "Store"
         ],
         "description": "",
+        "summary": "Add Store-Components",
         "operationId": "storecomponents",
         "produces": [
           "application/json"
@@ -1184,9 +1222,10 @@
     "/storeheaderfooter": {
       "post": {
         "tags": [
-          "storeheaderfooter"
+          "Store"
         ],
         "description": "",
+        "summary": "Store Header Footer",
         "operationId": "storeheaderfooter",
         "produces": [
           "application/json"
@@ -1214,9 +1253,10 @@
     "/getstorecomponents": {
       "get": {
         "tags": [
-          "getstorecomponents"
+          "Store"
         ],
         "description": "",
+        "summary": "Get Store-Components",
         "operationId": "getstorecomponents",
         "produces": [
           "application/json"
@@ -1235,9 +1275,10 @@
     "/getsortbyproducts": {
       "get": {
         "tags": [
-          "getsortbyproducts"
+          "Product"
         ],
         "description": "",
+        "summary": "Get Sort By Product",
         "operationId": "getsortbyproducts",
         "produces": [
           "application/json"
@@ -1256,9 +1297,10 @@
     "/getproductsfilter": {
       "get": {
         "tags": [
-          "getproductsfilter"
+          "Filter"
         ],
         "description": "",
+        "summary": "Get Product Filter",
         "operationId": "getproductsfilter",
         "produces": [
           "application/json"
@@ -1277,9 +1319,10 @@
     "/activeapp": {
       "get": {
         "tags": [
-          "activeapp"
+          "Apps"
         ],
         "description": "",
+        "summary": "Get Active App",
         "operationId": "activeapp",
         "produces": [
           "application/json"
@@ -1298,9 +1341,10 @@
     "/getHomePageSeo": {
       "get": {
         "tags": [
-          "getHomePageSeo"
+          "HomePageSeo"
         ],
         "description": "",
+        "summary": "Get HomePageSeo",
         "operationId": "getHomePageSeo",
         "produces": [
           "application/json"
@@ -1319,9 +1363,10 @@
     "/getCopyrights": {
       "get": {
         "tags": [
-          "getCopyrights"
+          "Copyrights"
         ],
         "description": "",
+        "summary": "Get Copyrights",
         "operationId": "getCopyrights",
         "produces": [
           "application/json"
@@ -1340,6 +1385,7 @@
     "/updateBanner": {
       "post": {
         "description": "",
+        "summary": "Update Banner",
         "operationId": "updateBanner",
         "parameters": [
           {
@@ -1365,13 +1411,14 @@
           }
         },
         "tags": [
-          "updateBanner"
+          "Banner"
         ]
       }
     },
     "/updateBannerData": {
       "post": {
         "description": "",
+        "summary": "Update BannerData",
         "consumes": [
           "application/json"
         ],
@@ -1399,7 +1446,7 @@
           }
         },
         "tags": [
-          "updateBannerData"
+          "Banner"
         ]
       }
     },
@@ -1438,6 +1485,7 @@
     "/addCompare": {
       "post": {
         "description": "",
+        "summary": "Add to Compare",
         "operationId": "addCompare",
         "consumes": [
           "application/json"
@@ -1464,13 +1512,14 @@
           }
         },
         "tags": [
-          "addCompare"
+          "Compare"
         ]
       }
     },
     "/addWishlist": {
       "post": {
         "description": "",
+        "summary": "Add WishList",
         "operationId": "addWishlist",
         "parameters": [
           {
@@ -1494,13 +1543,14 @@
           }
         },
         "tags": [
-          "addWishlist"
+          "WishList"
         ]
       }
     },
     "/categoryPagewidgets": {
       "get": {
         "description": "",
+        "summary": "Get category Page Widgets",
         "operationId": "categoryPagewidgets",
         "parameters": [],
         "produces": [
@@ -1515,13 +1565,14 @@
           }
         },
         "tags": [
-          "categoryPagewidgets"
+          "Pagewidgets"
         ]
       }
     },
     "/checkPincodestatus": {
       "get": {
         "description": "",
+        "summary": "Check Pincode Status",
         "operationId": "checkPincodestatus",
         "parameters": [
           {
@@ -1546,13 +1597,14 @@
           }
         },
         "tags": [
-          "checkPincodestatus"
+          "Pincodes"
         ]
       }
     },
     "/compareList": {
       "get": {
         "description": "",
+        "summary": "Get Compare List",
         "operationId": "compareList",
         "parameters": [],
         "produces": [
@@ -1567,16 +1619,17 @@
           }
         },
         "tags": [
-          "compareList"
+          "Compare"
         ]
       }
     },
     "/deleteBanner": {
       "post": {
         "description": "",
+        "summary": "Delete Banner",
         "operationId": "deleteBanner",
         "tags": [
-          "deleteBanner"
+          "Banner"
         ],
         "produces": [
           "application/json"
@@ -1604,6 +1657,7 @@
     "/discountedProducts": {
       "get": {
         "description": "",
+        "summary": "Get Discounted Product",
         "operationId": "discountedProducts",
         "parameters": [],
         "produces": [
@@ -1618,13 +1672,14 @@
           }
         },
         "tags": [
-          "discountedProducts"
+          "Product"
         ]
       }
     },
     "/facebookFan": {
       "get": {
         "description": "",
+        "summary": "Get Facebook Fans",
         "operationId": "facebookFan",
         "parameters": [],
         "produces": [
@@ -1639,13 +1694,14 @@
           }
         },
         "tags": [
-          "facebookFan"
+          "FacebookFan"
         ]
       }
     },
     "/faviconImage": {
       "post": {
         "description": "",
+        "summary": "Add Favicon Image",
         "operationId": "faviconImage",
         "consumes": [
           "multipart/form-data"
@@ -1671,13 +1727,14 @@
           }
         },
         "tags": [
-          "faviconImage"
+          "Favicon Image"
         ]
       }
     },
     "/getBlogs": {
       "get": {
         "description": "",
+        "summary": "Get Blogs",
         "operationId": "getBlogs",
         "parameters": [],
         "produces": [
@@ -1692,7 +1749,7 @@
           }
         },
         "tags": [
-          "getBlogs"
+          "Blogs"
         ]
       }
     },
@@ -1721,6 +1778,7 @@
     "/getCurrency": {
       "get": {
         "description": "",
+        "summary": "Get Currency",
         "operationId": "getCurrency",
         "parameters": [],
         "produces": [
@@ -1735,13 +1793,14 @@
           }
         },
         "tags": [
-          "getCurrency"
+          "Currency"
         ]
       }
     },
     "/getInstagramfeed": {
       "get": {
         "description": "",
+        "summary": "Get Instagram Feed",
         "operationId": "getInstagramfeed",
         "parameters": [],
         "produces": [
@@ -1756,13 +1815,14 @@
           }
         },
         "tags": [
-          "getInstagramfeed"
+          "Instagram"
         ]
       }
     },
     "/getSociallogin": {
       "get": {
         "description": "",
+        "summary": "Get Social Login",
         "operationId": "getSociallogin",
         "parameters": [],
         "produces": [
@@ -1777,13 +1837,14 @@
           }
         },
         "tags": [
-          "getSociallogin"
+          "Social Login"
         ]
       }
     },
     "/getTestimonials": {
       "get": {
         "description": "",
+        "summary": "Get Testimonials",
         "operationId": "getTestimonials",
         "parameters": [],
         "produces": [
@@ -1798,13 +1859,14 @@
           }
         },
         "tags": [
-          "getTestimonials"
+          "Testimonials"
         ]
       }
     },
     "/imageDimensions": {
       "get": {
         "description": "",
+        "summary": "Get Image Dimensions",
         "operationId": "imageDimensions",
         "parameters": [],
         "produces": [
@@ -1819,13 +1881,14 @@
           }
         },
         "tags": [
-          "imageDimensions"
+          "Image Dimensions"
         ]
       }
     },
     "/latestProducts": {
       "get": {
         "description": "",
+        "summary": "Get Latest Products",
         "operationId": "latestProducts",
         "parameters": [],
         "produces": [
@@ -1840,13 +1903,14 @@
           }
         },
         "tags": [
-          "latestProducts"
+          "Product"
         ]
       }
     },
     "/othersAlsoBought": {
       "get": {
-        "description": "",
+        "description": "Get Others Also Bought Products",
+        "summary": "Others Also Bouoght",
         "operationId": "othersAlsoBought",
         "parameters": [],
         "produces": [
@@ -1861,13 +1925,14 @@
           }
         },
         "tags": [
-          "othersAlsoBought"
+          "Products"
         ]
       }
     },
     "/productFilter": {
       "get": {
         "description": "",
+        "summary": "Get Product Filter",
         "operationId": "productFilter",
         "parameters": [],
         "produces": [
@@ -1882,7 +1947,7 @@
           }
         },
         "tags": [
-          "productFilter"
+          "Filter"
         ]
       }
     },
